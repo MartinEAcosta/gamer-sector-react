@@ -1,29 +1,29 @@
 export const data = [
     {
         id : '0',
-        title : 'Example text',
+        title : 'Redes',
         description : [
-            'This is a list',
-            'of items',
-            'in a list'
+            'Twitter',
+            'Facebook',
+            'Instagram',
         ]
     },
     {
         id : '1',
-        title : 'Another example',
+        title : 'Contacto',
         description : [
-            'This is a list',
-            'of items',
-            'in a list'
+            'Email : gamersector@gmail.com',
+            'Whatsapp : +54 7 77-777-777',
+            'Horario de atención : 24/7'
         ]
     },
     {
         id : '2',
         title : 'Soporte',
         description : [
-            'This is a list',
-            'of items',
-            'in a list'
+            'Ayuda',
+            'Quiénes Somos',
+            'Términos y condiciones',
         ]
     }
 ];

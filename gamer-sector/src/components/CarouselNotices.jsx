@@ -22,7 +22,7 @@ export const CarouselNotices = ( { data } ) =>{
     return(
         <>
             <section>
-                <div className="w-full h-full relative flex items-center justify-center">
+                <div className="px-10 h-full overflow-hidden relative flex items-center justify-center">
                     <div className='absolute left-0 mx-5' onClick={prevSlide}>
                         <LeftArrow />
                     </div>

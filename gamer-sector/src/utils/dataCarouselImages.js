@@ -6,7 +6,7 @@ export const data = [
     },
     {
         id: 1,
-        url: "https://fastly.picsum.photos/id/447/1600/1080.jpg?hmac=fKlimgfKrSJIcSJzZULUJngPZQbIu3x0bBWMKHbfkXU",
+        url: "https://fastly.picsum.photos/id/530/1600/860.jpg?hmac=XXdQ6vl81X5ZDOLpn17mIfDMsQpkOrX07DsxeQpAY74",
         alt: "Chico con gorra"
     }
 ]

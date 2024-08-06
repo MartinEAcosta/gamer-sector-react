@@ -7,7 +7,7 @@ export const Footer = () => {
         <>
             <footer className="bg-slate-800 ">
 
-                <section className='text-white px-10 py-20 text-xl'>
+                <section className='text-slate-100 px-10 py-20 text-xl'>
                     <p>
                         Somos una empresa dedicada a la venta de productos tecnológicos de alta calidad. 
                         Ofrecemos una amplia gama de productos a precios competitivos.
@@ -19,7 +19,7 @@ export const Footer = () => {
                         <CardFooter title={item.title} desc={item.description} key={item.id} />
                     ))}
                 </article>
-                
+
             </footer>
         </>
     );
