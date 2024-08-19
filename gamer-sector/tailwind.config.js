@@ -10,6 +10,9 @@ export default {
         roboto: ["Roboto", 'sans-serif'],
         kanit: ["Kanit", 'sans-serif']
       },
+      spacing: {
+        31 : '8.5rem',
+      },
     },
   },
   plugins: [],

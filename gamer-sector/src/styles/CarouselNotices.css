@@ -1,11 +1,15 @@
 .indicator{
-    width: 30%;
-    height: 30%;
+    width: 1%;
+    height: 3%;
     outline: none;
     border: solid;
-    border-radius: 200px;
+    border-radius: 10px;
     cursor: pointer;
     background-color: white;
+    bottom: 10px;
+    display: flex;
+    position: absolute;
+    z-index: 0;
 }
 
 .indicator-inactive{

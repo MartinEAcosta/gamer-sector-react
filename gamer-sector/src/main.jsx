@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Header />
     <Nav />
-    <CarouselNotices data={data} />
+    <CarouselNotices data={ data } />
     <Footer />
   </React.StrictMode>,
 )

@@ -7,35 +7,46 @@ import { useState } from 'react';
 
 export const CarouselNotices = ( { data } ) =>{
 
-    const [ slide, setSlide ] = useState( 0 );
+    const [ currentSlide, setCurrentSlide ] = useState( 0 );
 
-    const nextSlide = () => {
-        setSlide( slide === data.length - 1 ? 0 : slide + 1 );
+    // const [ slide, setSlide ] = useState( 0 );
+
+    const handleNextSlide = () => {
+        setCurrentSlide( currentSlide === data.length - 1 ? 0 : currentSlide + 1 );
     }
 
-    const prevSlide = () => {
-        setSlide( slide === 0 ? data.length - 1 : slide - 1 );
+    const handlePrevSlide = () => {
+        setCurrentSlide( currentSlide === 0 ? data.length - 1 : currentSlide - 1 );
     }
 
 
 
     return(
         <>
-            <section>
-                <div className="px-10 h-full overflow-hidden relative flex items-center justify-center">
-                    <div className='absolute left-0 mx-5' onClick={prevSlide}>
+            <section className='z-0 relative'>
+                <div className="px-10 h-96 overflow-hidden relative flex items-center justify-center">
+                    <div className='absolute left-0 mx-11' onClick={ handlePrevSlide }>
                         <LeftArrow />
                     </div>
                     
-                    {data.map((item,idx) => {
-                        return(
-                            <img src={item.url} alt={item.alt} key={item.id} className={slide === idx ? "slide max-w-full h-auto" : "slide slide-hidden"}/>
+                    {data.map( ( item,idx ) => {
+                        return (
+                                <img src={ item.url } alt={ item.alt } key={ item.id } className={ idx === currentSlide ? "slide max-w-full h-auto" : "slide slide-hidden" }/>
                         );
                     })}
-
-                    <div className='absolute right-0 mx-5' onClick={nextSlide}>
-                        <RightArrow /> 
+                    
+                    <div className='w-full h-full flex justify-center space-x-10 absolute'>
+                        {data.map( ( item ) => {
+                            return (
+                                <div className='indicator' key={ item.id }></div>
+                            );
+                        })}
                     </div>
+                        
+
+                    <div className='absolute right-0 mx-11' onClick={ handleNextSlide }>
+                        <RightArrow /> 
+                    </div> 
                 </div>   
             </section>
         </>
