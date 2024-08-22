@@ -5,7 +5,7 @@ import { data } from '../utils/dataFooter'
 export const Footer = () => {
     return (
         <>
-            <footer className="bg-slate-800 ">
+            <footer className="bg-slate-900 ">
 
                 <section className='text-slate-100 px-10 py-20 text-xl'>
                     <p>
@@ -14,7 +14,7 @@ export const Footer = () => {
                     </p>
                 </section>
 
-                <article className='flex justify-between p-20'>
+                <article className='flex justify-between p-10'>
                     {data.map(item => (
                         <CardFooter title={item.title} desc={item.description} key={item.id} />
                     ))}
