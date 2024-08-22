@@ -9,8 +9,6 @@ export const CarouselNotices = ( { data } ) =>{
 
     const [ currentSlide, setCurrentSlide ] = useState( 0 );
 
-    // const [ slide, setSlide ] = useState( 0 );
-
     const handleNextSlide = () => {
         setCurrentSlide( currentSlide === data.length - 1 ? 0 : currentSlide + 1 );
     }
@@ -19,13 +17,19 @@ export const CarouselNotices = ( { data } ) =>{
         setCurrentSlide( currentSlide === 0 ? data.length - 1 : currentSlide - 1 );
     }
 
+    const handleSpecificSlide = ( e ) => {
+        const id = Number(e.currentTarget.getAttribute('data-id'));
+        setCurrentSlide( id );
+    }
 
 
     return(
         <>
             <section className='z-0 relative'>
-                <div className="px-10 h-96 overflow-hidden relative flex items-center justify-center">
-                    <div className='absolute left-0 mx-11' onClick={ handlePrevSlide }>
+
+                <div className="h-96 overflow-hidden relative flex items-center justify-center">
+
+                    <div className='absolute left-40' onClick={ handlePrevSlide }>
                         <LeftArrow />
                     </div>
                     
@@ -36,18 +40,20 @@ export const CarouselNotices = ( { data } ) =>{
                     })}
                     
                     <div className='w-full h-full flex justify-center space-x-10 absolute'>
-                        {data.map( ( item ) => {
+                        {data.map( ( item , idx ) => {
                             return (
-                                <div className='indicator' key={ item.id }></div>
+                                <div className={ idx === currentSlide ? 'indicator' : 'indicator indicator-inactive' } data-id={ idx } key={ item.id } onClick={ handleSpecificSlide }></div>
                             );
                         })}
                     </div>
                         
 
-                    <div className='absolute right-0 mx-11' onClick={ handleNextSlide }>
+                    <div className='absolute right-40' onClick={ handleNextSlide }>
                         <RightArrow /> 
                     </div> 
-                </div>   
+
+                </div>
+
             </section>
         </>
     );

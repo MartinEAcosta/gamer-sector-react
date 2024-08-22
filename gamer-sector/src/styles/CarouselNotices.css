@@ -4,17 +4,22 @@
     outline: none;
     border: solid;
     border-radius: 10px;
+    border-width: 2px;
     cursor: pointer;
-    background-color: white;
+    background-color: #f59e0b;
     bottom: 10px;
     display: flex;
     position: absolute;
     z-index: 0;
 }
 
+.indicator:hover{
+    background-color: #f59e0b;
+    scale: 1.2;
+}
+
 .indicator-inactive{
-    background-color: #e0e0e0;
-    
+    background-color: rgb(218, 216, 216);
 }
 
 
