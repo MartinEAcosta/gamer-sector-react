@@ -1,8 +1,11 @@
 
-export default function CardProduct() {
+export const CardProduct = () => {
+
   return (
-    <div>
-      
+    <div className="flex">
+        <img src="" alt="" />
+        <h2></h2>
+        <h3></h3>
     </div>
   )
 }

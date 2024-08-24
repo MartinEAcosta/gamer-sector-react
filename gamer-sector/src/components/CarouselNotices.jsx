@@ -1,6 +1,6 @@
 import '../styles/CarouselNotices.css';
 import PropTypes from 'prop-types';
-import { LeftArrow , RightArrow } from '../components';
+// import { LeftArrow , RightArrow } from '../components';
 import { useState } from 'react';
 
 
@@ -8,13 +8,13 @@ export const CarouselNotices = ( { data } ) =>{
 
     const [ currentSlide, setCurrentSlide ] = useState( 0 );
 
-    const handleNextSlide = () => {
-        setCurrentSlide( currentSlide === data.length - 1 ? 0 : currentSlide + 1 );
-    }
+    // const handleNextSlide = () => {
+    //     setCurrentSlide( currentSlide === data.length - 1 ? 0 : currentSlide + 1 );
+    // }
 
-    const handlePrevSlide = () => {
-        setCurrentSlide( currentSlide === 0 ? data.length - 1 : currentSlide - 1 );
-    }
+    // const handlePrevSlide = () => {
+    //     setCurrentSlide( currentSlide === 0 ? data.length - 1 : currentSlide - 1 );
+    // }
 
     const handleSpecificSlide = ( e ) => {
         const id = Number(e.currentTarget.getAttribute('data-id'));
@@ -28,9 +28,9 @@ export const CarouselNotices = ( { data } ) =>{
 
                 <div className="h-96 overflow-hidden relative flex items-center justify-center">
 
-                    <div className='absolute left-40 cursor-pointer flex z-10' onClick={ handlePrevSlide }>
+                    {/* <div className='absolute left-40 cursor-pointer flex' onClick={ handlePrevSlide }>
                         <LeftArrow />
-                    </div>
+                    </div> */}
                     
                     {data.map( ( item,idx ) => {
                         return (
@@ -47,9 +47,9 @@ export const CarouselNotices = ( { data } ) =>{
                     </div>
                         
 
-                    <div className='absolute right-40 cursor-pointer' onClick={ handleNextSlide }>
+                    {/* <div className='absolute right-40 cursor-pointer' onClick={ handleNextSlide }>
                         <RightArrow /> 
-                    </div> 
+                    </div>  */}
 
                 </div>
 

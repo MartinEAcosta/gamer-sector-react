@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Header , Nav , CarouselNotices, Footer } from './components';
+import { Header , Nav , CarouselNotices, Footer, CarouselProducts } from './components';
 import { data }from './helpers/dataCarouselImages'
 
 
@@ -12,6 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Header />
     <Nav />
     <CarouselNotices data={ data } />
+    <CarouselProducts />
     <Footer />
   </React.StrictMode>,
 )
