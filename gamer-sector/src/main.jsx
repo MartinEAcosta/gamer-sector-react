@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Header } from './components/Header';
-import { Nav } from './components/Nav';
-import { CarouselNotices } from './components/CarouselNotices';
-import { Footer } from './components/Footer';
-import { data }from './utils/dataCarouselImages'
+import { Header , Nav , CarouselNotices, Footer } from './components';
+import { data }from './helpers/dataCarouselImages'
 
 
 

@@ -1,6 +1,6 @@
 export const data = [
     {
-        id : '0',
+        id : 0,
         title : 'Redes',
         description : [
             'Twitter',
@@ -9,7 +9,7 @@ export const data = [
         ]
     },
     {
-        id : '1',
+        id : 1,
         title : 'Contacto',
         description : [
             'Email : gamersector@gmail.com',
@@ -18,7 +18,7 @@ export const data = [
         ]
     },
     {
-        id : '2',
+        id : 2,
         title : 'Soporte',
         description : [
             'Ayuda',

@@ -1,5 +1,5 @@
-import { CardFooter } from './CardFooter';
-import { data } from '../utils/dataFooter'
+import { CardFooter } from '../components';
+import { data } from '../helpers/dataFooter'
 
 
 export const Footer = () => {
@@ -16,7 +16,7 @@ export const Footer = () => {
 
                 <article className='flex justify-between p-10'>
                     {data.map(item => (
-                        <CardFooter title={item.title} desc={item.description} key={item.id} />
+                        <CardFooter id={ item.id } title={item.title} desc={item.description} key={item.id} />
                     ))}
                 </article>
 

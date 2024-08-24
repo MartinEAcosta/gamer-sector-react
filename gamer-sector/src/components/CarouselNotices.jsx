@@ -1,7 +1,6 @@
 import '../styles/CarouselNotices.css';
 import PropTypes from 'prop-types';
-import { LeftArrow } from './LeftArrow';
-import { RightArrow } from './RightArrow';
+import { LeftArrow , RightArrow } from '../components';
 import { useState } from 'react';
 
 
@@ -25,21 +24,21 @@ export const CarouselNotices = ( { data } ) =>{
 
     return(
         <>
-            <section className='z-0 relative'>
+            <section className='relative'>
 
                 <div className="h-96 overflow-hidden relative flex items-center justify-center">
 
-                    <div className='absolute left-40' onClick={ handlePrevSlide }>
+                    <div className='absolute left-40 cursor-pointer flex z-10' onClick={ handlePrevSlide }>
                         <LeftArrow />
                     </div>
                     
                     {data.map( ( item,idx ) => {
                         return (
-                                <img src={ item.url } alt={ item.alt } key={ item.id } className={ idx === currentSlide ? "slide max-w-full h-auto" : "slide slide-hidden" }/>
+                                <img src={ item.url } alt={ item.alt } key={ item.id } className={ idx === currentSlide ? "-z-10 slide max-w-full h-auto" : "-z-10 slide slide-hidden" }/>
                         );
                     })}
                     
-                    <div className='w-full h-full flex justify-center space-x-10 absolute'>
+                    <div className='w-full h-full flex justify-center space-x-10 absolute z-0'>
                         {data.map( ( item , idx ) => {
                             return (
                                 <div className={ idx === currentSlide ? 'indicator' : 'indicator indicator-inactive' } data-id={ idx } key={ item.id } onClick={ handleSpecificSlide }></div>
@@ -48,7 +47,7 @@ export const CarouselNotices = ( { data } ) =>{
                     </div>
                         
 
-                    <div className='absolute right-40' onClick={ handleNextSlide }>
+                    <div className='absolute right-40 cursor-pointer' onClick={ handleNextSlide }>
                         <RightArrow /> 
                     </div> 
 
