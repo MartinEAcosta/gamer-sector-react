@@ -11,7 +11,7 @@ export default {
         kanit: ["Kanit", 'sans-serif']
       },
       spacing: {
-        31 : '8.5rem',
+        22 : '7.6rem',
       },
     },
   },
