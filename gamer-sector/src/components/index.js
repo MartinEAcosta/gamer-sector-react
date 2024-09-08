@@ -1,4 +1,3 @@
-export * from '../components/CardFooter';
 export * from '../components/CardProduct';
 export * from '../components/CarouselNotices';
 export * from '../components/CarouselProducts'
