@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Header />
     <Nav />
     <CarouselNotices data={ data } />
-    <CarouselProducts />
+    <CarouselProducts title={ "Ultimas Novedades" }/>
     <Footer />
   </React.StrictMode>,
 )

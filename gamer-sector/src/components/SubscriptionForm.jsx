@@ -12,7 +12,7 @@ export const SubscriptionForm = () => {
                 <form className="flex border rounded-3xl w-3/4 m-auto" action="" method="get">
 
                     <input type="email" name="" id="" placeholder="example@gmail.com" className="m-5 px-3  bg-inherit focus:outline-none valid:border-red-600"/>
-                    <button type="submit" className="rounded-3xl font-bold bg-slate-700 bg-opacity-30 hover:text-amber-500 hover:bg-slate-800 text-center border-l h-auto w-full ">Suscribirse</button>
+                    <button type="submit" className="rounded-3xl font-semibold bg-slate-700 bg-opacity-30 hover:text-amber-500 hover:bg-slate-800 text-center border-l h-auto w-full ">Suscribirse</button>
 
                 </form>
 

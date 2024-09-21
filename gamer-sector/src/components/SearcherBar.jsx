@@ -9,9 +9,14 @@ export const SearcherBar = () => {
         setInputValue( target.value );
     } 
 
+    const onSumbit = ( e ) => {
+        e.preventDefault();
+        console.log(e);
+    }
+
     return (
         <>
-            <form action="GET">
+            <form action="GET" onSubmit={ onSumbit }>
                 <search className="flex border text-slate-100 border-amber-500 rounded-xl items-center">
                     <input 
                         className="bg-transparent px-3.5 rounded-xl focus:outline-none" 
@@ -30,7 +35,7 @@ export const SearcherBar = () => {
                         />
 
                     </button>
-                    
+
                 </search>
             </form>
         </>
