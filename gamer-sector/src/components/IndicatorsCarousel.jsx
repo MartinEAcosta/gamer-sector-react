@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 export const IndicatorsCarousel = ( { data , currentSlide , handleIndicator } ) => {
     return (
     <> 
-        <div className='w-full h-full flex justify-center space-x-10 absolute z-0'>
+        <div className='w-full h-full flex justify-center space-x-10 z-0'>
         {data.map( ( item , idx ) => {
             return (
                 <div 

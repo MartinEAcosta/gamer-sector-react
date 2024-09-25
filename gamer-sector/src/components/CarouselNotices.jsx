@@ -24,9 +24,9 @@ import { IndicatorsCarousel } from './IndicatorsCarousel';
 
         return(
             <>
-                <section className=''>
+                <section className='relative'>
 
-                    <div className="relative flex items-center justify-center">
+                    <div className="flex items-center justify-center overflow-hidden max-h-96">
 
                         {/* <div className='absolute left-40 cursor-pointer flex' onClick={ handlePrevSlide }>
                             <LeftArrow />
@@ -36,22 +36,23 @@ import { IndicatorsCarousel } from './IndicatorsCarousel';
                             return (
                                     <img 
                                         src={ item.url } alt={ item.alt } key={ item.id } 
-                                        className={ idx === currentSlide ? "-z-10 slide max-w-full h-auto" : "-z-10 slide slide-hidden" }
+                                        className={ idx === currentSlide ? "-z-10 slide" : "-z-10 slide slide-hidden" }
                                     />
                             );
                         })}
 
-                        <IndicatorsCarousel 
-                            data={ data } 
-                            currentSlide={ currentSlide } 
-                            handleIndicator={ handleSpecificSlide } 
-                        />
 
                         {/* <div className='absolute right-40 cursor-pointer' onClick={ handleNextSlide }>
                             <RightArrow /> 
                         </div>  */}
         
                     </div>
+
+                    <IndicatorsCarousel 
+                            data={ data } 
+                            currentSlide={ currentSlide } 
+                            handleIndicator={ handleSpecificSlide } 
+                    />
 
                 </section>
             </>

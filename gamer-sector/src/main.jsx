@@ -13,6 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Nav />
     <CarouselNotices data={ data } />
     <CarouselProducts title={ "Ultimas Novedades" }/>
+    <CarouselProducts title={ "Mejores Valorados" }/>
     <Footer />
   </React.StrictMode>,
 )
