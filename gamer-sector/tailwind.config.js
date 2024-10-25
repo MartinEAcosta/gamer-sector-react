@@ -11,8 +11,11 @@ export default {
         kanit: ["Kanit", 'sans-serif']
       },
       spacing: {
-        22 : '7.5rem',
+        21 : '6.5rem',
       },
+      color: {
+        redi: ['#34344']
+      }
     },
   },
   plugins: [],

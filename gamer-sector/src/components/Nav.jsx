@@ -18,7 +18,7 @@ export const Nav = () => {
 
     return (
         <>
-            <nav className="bg-slate-800 flex justify-evenly text-slate-100  shadow-xl z-10 sticky top-22 items-center">
+            <nav className="bg-slate-800 flex justify-evenly text-slate-100 shadow-xl z-10 sticky top-21 items-center">
                 <div 
                     className='dropDown' 
                     onMouseEnter={ handleMouseEnter }

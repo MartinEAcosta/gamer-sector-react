@@ -23,4 +23,8 @@
     background-color: rgba(218, 216, 216, 0.658);
 }
 
+.slide-hidden{
+    display: none;
+}
+
 

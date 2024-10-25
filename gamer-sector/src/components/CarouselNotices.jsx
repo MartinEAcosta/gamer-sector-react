@@ -1,57 +1,43 @@
 import '../styles/CarouselNotices.css';
 import PropTypes from 'prop-types';
-// import { LeftArrow , RightArrow } from '../components';
-import { useState } from 'react';
 import { IndicatorsCarousel } from './IndicatorsCarousel';
+import { Arrow } from './Arrow';
+import { useCarousel } from '../hooks/useCarousel';
 
     // Pasadas via Props por el Main.jsx
     export const CarouselNotices = ( { data } ) =>{
 
-        const [ currentSlide, setCurrentSlide ] = useState( 0 );
-
-        // const handleNextSlide = () => {
-        //     setCurrentSlide( currentSlide === data.length - 1 ? 0 : currentSlide + 1 );
-        // }
-
-        // const handlePrevSlide = () => {
-        //     setCurrentSlide( currentSlide === 0 ? data.length - 1 : currentSlide - 1 );
-        // }
-
-        const handleSpecificSlide = ( e ) => {
-            const id = Number(e.currentTarget.getAttribute('data-id'));
-            setCurrentSlide( id );
-        }
+        const { onNextSlide, onPrevSlide, onSpecificSlide, currentSlide } = useCarousel( { data } , 0 );
 
         return(
             <>
-                <section className='relative'>
+                <section className='relative drop-shadow-2xl'>
 
-                    <div className="flex items-center justify-center overflow-hidden max-h-96">
+                    <div className="flex items-center justify-center">
 
-                        {/* <div className='absolute left-40 cursor-pointer flex' onClick={ handlePrevSlide }>
-                            <LeftArrow />
-                        </div> */}
+                        <div className='absolute left-10 cursor-pointer flex' onClick={ onPrevSlide }>
+                            <Arrow direction="back" />
+                        </div>
                         
                         {data.map( ( item,idx ) => {
                             return (
                                     <img 
                                         src={ item.url } alt={ item.alt } key={ item.id } 
-                                        className={ idx === currentSlide ? "-z-10 slide" : "-z-10 slide slide-hidden" }
+                                        className={ idx === currentSlide ? "" : "slide-hidden" }
                                     />
                             );
                         })}
 
-
-                        {/* <div className='absolute right-40 cursor-pointer' onClick={ handleNextSlide }>
-                            <RightArrow /> 
-                        </div>  */}
+                        <div className='absolute right-10 cursor-pointer' onClick={ onNextSlide }>
+                            <Arrow direction="forward" /> 
+                        </div> 
         
                     </div>
 
                     <IndicatorsCarousel 
                             data={ data } 
                             currentSlide={ currentSlide } 
-                            handleIndicator={ handleSpecificSlide } 
+                            handleIndicator={ onSpecificSlide } 
                     />
 
                 </section>

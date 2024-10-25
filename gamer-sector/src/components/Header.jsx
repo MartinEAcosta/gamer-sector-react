@@ -9,7 +9,7 @@ export const Header = () => {
 
     return (
         <>
-            <header className=" bg-gray-900 py-8 px-10 flex justify-between items-center z-10 sticky top-0">
+            <header className=" bg-gray-900 py-6 px-10 flex justify-between items-center z-10 sticky top-0">
 
                 <div className="flex">
                     <img className="pr-2" src={ Logo } alt="Logo Gamer Sector" />
