@@ -1,6 +1,6 @@
 import '../styles/CarouselNotices.css';
 import PropTypes from 'prop-types';
-import { IndicatorsCarousel } from './IndicatorsCarousel';
+import { IndicatorsCarousel } from '../components/IndicatorsCarousel';
 import { Arrow } from './Arrow';
 import { useCarousel } from '../hooks/useCarousel';
 
@@ -37,7 +37,7 @@ import { useCarousel } from '../hooks/useCarousel';
                     <IndicatorsCarousel 
                             data={ data } 
                             currentSlide={ currentSlide } 
-                            handleIndicator={ onSpecificSlide } 
+                            onIndicator={ onSpecificSlide } 
                     />
 
                 </section>

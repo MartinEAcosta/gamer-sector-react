@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
-export const IndicatorsCarousel = ( { data , currentSlide , handleIndicator } ) => {
+export const IndicatorsCarousel = ( { data , currentSlide , onIndicator } ) => {
+
     return (
     <> 
         <div className='w-full h-full flex justify-center space-x-10 z-0'>
@@ -8,7 +9,7 @@ export const IndicatorsCarousel = ( { data , currentSlide , handleIndicator } ) 
             return (
                 <div 
                     className={ idx === currentSlide ? 'indicator' : 'indicator indicator-inactive' } 
-                    data-id={ idx } key={ item.id } onClick={ handleIndicator }
+                    data-id={ idx } key={ item.id } onClick={ onIndicator }
                     aria-label='{ `Go to slide ${ idx + 1 ` }'
                 />
             );
@@ -30,6 +31,6 @@ IndicatorsCarousel.propTypes = {
         }).isRequired,
         ),
     currentSlide: PropTypes.number.isRequired,
-    handleIndicator: PropTypes.func.isRequired,
+    onIndicator: PropTypes.func.isRequired,
 };
 

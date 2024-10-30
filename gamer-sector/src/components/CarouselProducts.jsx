@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types';
-import { CardProduct } from './CardProduct';
-import { Arrow } from './Arrow';
-
+import { CardProduct, Arrow } from '../components';
 
 export const CarouselProducts = ( { title } ) => {
 
