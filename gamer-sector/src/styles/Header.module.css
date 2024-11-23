@@ -1,0 +1,55 @@
+@import './variables.css';
+
+/* bg-gray-900 py-6 px-10 flex justify-between items-center z-10 sticky top-0*/
+.header{
+    display: flex;
+    background-color: var(--primaryColor);
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 5;
+    top: 0px;
+    padding: 10px 6px;
+}
+
+.containerLogo{
+    display: flex;
+    margin: 10px;
+}
+
+.imgLogo{
+    padding-right: 2px;
+}
+
+/* "text-amber-500 font-kanit font-bold text-xl w-4 hover:opacity-90 cursor-pointer" */
+
+.logoLink{
+    color: var(--brandColor);
+    font-family: var(--fontPrimary);
+    font-weight: bold;
+    font-size: larger;
+    cursor: pointer;
+    width: 4%;
+}
+
+.logoLink:hover{
+    opacity: 0.9;
+}
+
+.fontColor{
+    color: var(--whiteCustom);
+}
+
+/* 'flex items-center' */
+
+.rightContainer{
+    display: flex;
+    align-items: center;
+}
+
+/* "hover:text-slate-300 text-slate-100 font-roboto font-bold pl-5 py-2 rounded-xl
+                            "  */
+
+.loginBtn{
+    color: var(--whiteCustom);
+}

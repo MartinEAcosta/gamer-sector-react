@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Logo from '../assets/joystick.svg';
-import { SearcherBar } from './SearcherBAr';
+import { SearcherBar } from './SearcherBar';
+import { Link } from 'react'
+import styles from '../styles/Header.module.css';
 
 export const Header = () => {
 
@@ -9,17 +11,17 @@ export const Header = () => {
 
     return (
         <>
-            <header className=" bg-gray-900 py-6 px-10 flex justify-between items-center z-10 sticky top-0">
+            <header className={styles.header}>
 
-                <div className="flex">
-                    <img className="pr-2" src={ Logo } alt="Logo Gamer Sector" />
-                    <a href='' className="text-amber-500 font-kanit font-bold text-xl w-4 hover:opacity-90 cursor-pointer"> 
-                        <span className=' text-slate-50 '> GAMER </span> 
+                <div className={styles.containerLogo}>
+                    <img className={styles.imgLogo} src={ Logo } alt="Logo Gamer Sector" />
+                    <a href='' className={styles.logoLink}> 
+                        <span className={styles.fontColor}> GAMER </span> 
                         SECTOR
                     </a>
                 </div>
 
-                <div className='flex items-center'>
+                <div className={styles.rightContainer}>
                     
                     <SearcherBar />
 
@@ -27,13 +29,13 @@ export const Header = () => {
                     {
                         !isLogged 
                         && 
-                        <a className="hover:text-slate-300 text-slate-100 font-roboto font-bold pl-5 py-2 rounded-xl
-                            " href="">
+                        <Link className={styles.loginBtn} href="/login">
                                 INICIAR SESIÓN
-                        </a>
+                        </Link>
                     }
                     
                 </div>
+
             </header>
         </>
     );

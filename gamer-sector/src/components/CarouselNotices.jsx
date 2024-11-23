@@ -1,7 +1,7 @@
 import '../styles/CarouselNotices.css';
 import PropTypes from 'prop-types';
 import { IndicatorsCarousel } from '../components/IndicatorsCarousel';
-import { Arrow } from './Arrow';
+import { Arrow } from './ArrowButton';
 import { useCarousel } from '../hooks/useCarousel';
 
     // Pasadas via Props por el Main.jsx
