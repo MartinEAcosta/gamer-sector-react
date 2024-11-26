@@ -1,4 +1,4 @@
-@import './variables.css';
+@import '../variables.css';
 
 /* bg-gray-900 py-6 px-10 flex justify-between items-center z-10 sticky top-0*/
 .header{
@@ -8,8 +8,9 @@
     align-items: center;
     position: sticky;
     z-index: 5;
+    height: 6.5 rem;
+    padding: 1rem 2rem 1rem 2rem;
     top: 0px;
-    padding: 10px 6px;
 }
 
 .containerLogo{
@@ -52,4 +53,11 @@
 
 .loginBtn{
     color: var(--whiteCustom);
+    font-family: var(--fontPrimary);
+    font-weight: bold;
+    margin: 10px;
+}
+
+.loginBtn:hover{
+    opacity: 0.9;
 }

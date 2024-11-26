@@ -1,0 +1,39 @@
+.navbarItem{
+    display: flex;
+    font-family: var(--fontSecondary);
+    font-weight: bold;
+    width: 9rem;
+}
+
+.navbarItem:hover{
+    color: var(--brandColor);
+}
+
+.dropDownContent {
+    display: block;
+    background: var(--lightPrimary);
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+}
+
+.dropDownContent li {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* "text-white font-roboto font-bold hover:text-amber-500 py-3 px-5" */
+.categoryName{
+    color: var(--whiteCustom);
+    font-family: var(--fontPrimary);
+    font-weight: bold;
+    margin: 10px;
+}
+
+.categoryName:hover{
+    color: var(--brandColor);
+}
+

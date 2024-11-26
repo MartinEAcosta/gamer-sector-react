@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import DropDownArrow from '../assets/dropdown-arrow-svgrepo-com.svg'
+import styles from '../styles/Header/Nav.module.css'
 import '../styles/Nav.css';
+import { DropDownCategory } from './DropDownCategory';
 
 
 export const Nav = () => {
@@ -18,28 +20,28 @@ export const Nav = () => {
 
     return (
         <>
-            <nav className="bg-slate-800 flex justify-evenly text-slate-100 shadow-xl z-10 sticky top-21 items-center">
+            <nav className={styles.navContainer}>
                 <div 
-                    className='dropDown' 
+                    className={styles.btnDown} 
                     onMouseEnter={ handleMouseEnter }
                     onMouseLeave={ handleMouseLeave }
                 >
 
-                    <a className="dropBtn flex font-roboto font-bold hover:text-amber-500 hover:opacity-85" 
+                    <a className={`${styles.navbarItem} ${styles.dropBtn}`}
                         href="">
 
                         CATEGORIAS 
 
                         <img 
                             src={ DropDownArrow } 
-                            alt="Flecha desplegable" className={`' ${isHovered ? 'transition-transform -rotate-90  w-5 mx-1' : 'transition-transform w-5 mx-1'}`} 
+                            // alt="Flecha desplegable" className={`' ${isHovered ? '' : ''}`} 
+                            alt="Flecha desplegable" className={`${styles.arrowDefault} ${!isHovered ? styles.arrowAnimation : ''}`}
                         />
-
                     </a>
 
-                    <ul className='dropDownContent'>
-                        <li className="text-white font-roboto font-bold hover:text-amber-500 py-3 px-5">PERIFERICOS</li>
-                    </ul>
+                    {isHovered && 
+                        <DropDownCategory />
+                    }
 
                 </div>
                 <a className="font-roboto font-bold hover:text-amber-500 hover:opacity-85" href="">PRODUCTOS</a>

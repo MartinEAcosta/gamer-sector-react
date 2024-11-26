@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import Logo from '../assets/joystick.svg';
 import { SearcherBar } from './SearcherBar';
-import { Link } from 'react'
-import styles from '../styles/Header.module.css';
+import styles from '../styles/Header/Header.module.css';
 
 export const Header = () => {
 
@@ -29,9 +28,9 @@ export const Header = () => {
                     {
                         !isLogged 
                         && 
-                        <Link className={styles.loginBtn} href="/login">
+                        <a className={styles.loginBtn} href="/login">
                                 INICIAR SESIÓN
-                        </Link>
+                        </a>
                     }
                     
                 </div>
