@@ -1,0 +1,43 @@
+@import '../variables.css';
+
+/* "bg-white my-8 mx-12 flex-col font-kanit font-semibold max-w-48 border 
+p-5 rounded-xl shadow-2xl hover:scale-105 hover:-rotate-1 transition-transform" */
+.cardProduct{
+    display: flex;
+    flex-direction: column;
+    max-width: 12rem;
+    border-radius: 1rem;
+    background-color: var(--whiteCustom);
+    margin: 1rem 3rem 1rem 0rem;
+    font-family: var(--fontPrimary);
+    font-weight: 500;
+    box-shadow: var(--boxShadow);
+    padding: 1.3rem;
+    transition: transform 0.5s ease;
+}
+
+.cardProduct:hover{
+    will-change: transform;
+    transform: rotate(-2deg) scale(1.02);
+}
+
+.descContainer{
+    margin: 1rem 0rem 1rem;
+}
+
+/* 'whitespace-nowrap text-ellipsis overflow-hidden' */
+.nameProduct{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.priceText{
+    color: green;
+}
+
+/* 'text-gray-600 text-right' */
+.numberOfReviews{
+    text-align: right;
+    color: gray;
+}

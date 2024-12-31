@@ -1,44 +1,47 @@
 // Decidido realizarse de forma estatica ya que no seria la idea ser modificado.
 
 import { SubscriptionForm } from "./SubscriptionForm";
+import styles from "../styles/Footer/Footer.module.css";
 
 export const Footer = () => {
     return (
         <>
-            <footer className="bg-slate-900 flex-row px-10">
+            <footer className={styles.footerContainer}>
 
-                <div className="grid grid-cols-5 grid-rows-2 items-center">
+                <div className={styles.gridContent}>
                     
-                    <section className='col-start-1 col-end-4 row-start-1  text-slate-100 text-xl'>
+                    <section className={styles.aboutSection}>
 
-                        <h3 className="text-2xl font-bold font-roboto py-5 text-amber-500">Sobre Nosotros</h3>
+                        <h3 className={styles.titleAbout}>Sobre Nosotros</h3>
 
-                        <p className="text-lg font-roboto">
+                        <p className={styles.textAbout}>
                             Somos una tienda en línea especializada en la venta de productos tecnológicos de alta calidad. 
                             Ofrecemos una amplia gama de gadgets y dispositivos para satisfacer todas tus necesidades tecnológicas.
                         </p>
 
                     </section>
 
-                    <SubscriptionForm />
+                    <article className={styles.formContainer}>
+                        <SubscriptionForm />
+                    </article>
 
-                    <div className="grid grid-flow-col col-start-1 col-end-6 row-start-2 mt-40 font-roboto text-center text-slate-100 border-opacity-40 border-t-slate-600 border-t py-5">
+                    <div className={styles.map}>
 
-                        <div className="flex-col flex m-5">
-                            <a href="" className="text-lg my-2 hover:text-slate-300">Instagram</a>
-                            <a href="" className="text-lg my-2 hover:text-slate-300">Facebook</a>
-                            <a href="" className="text-lg my-2 hover:text-slate-300">Twitter</a>
+                        <div className={styles.colFooter}>
+                            <a href="" className={styles.textMap}>Instagram</a>
+                            <a href="" className={styles.textMap}>Facebook</a>
+                            <a href="" className={styles.textMap}>Twitter</a>
                         </div>
 
-                        <div className="flex-col flex m-5">
-                            <a href="" className="text-lg my-2 hover:text-slate-300">Ayuda</a>
-                            <a href="" className="text-lg my-2 hover:text-slate-300">Soporte</a>
-                            <a href="" className="text-lg my-2 hover:text-slate-300">FAQ</a>
+                        <div className={styles.colFooter}>
+                            <p className={styles.textMap}>Telefono: (123) 456-7890</p>
+                            <p className={styles.textMap}>Email: gamersector@tutienda.com</p>
+                            <p className={styles.textMap}>Dirección: Blessed 444, Tandil, Argentina</p>
                         </div>
-                        <div className="flex-col flex  m-5">
-                            <p className="text-lg my-2">(123) 456-7890</p>
-                            <p className="text-lg my-2">gamersector@tutienda.com</p>
-                            <p className="text-lg my-2">Blessed 444, Tandil, Argentina</p>
+                        <div className={styles.colFooter}>
+                            <a href="" className={styles.textMap}>Soporte</a>
+                            <a href="" className={styles.textMap}>Ayuda</a>
+                            <a href="" className={styles.textMap}>FAQ</a>
                         </div>
                     </div>
                 

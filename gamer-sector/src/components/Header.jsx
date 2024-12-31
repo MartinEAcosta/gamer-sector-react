@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import Logo from '../assets/joystick.svg';
+import UserIcon from '../assets/usericon.svg'
 import { SearcherBar } from './SearcherBar';
 import styles from '../styles/Header/Header.module.css';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
 
@@ -14,25 +16,30 @@ export const Header = () => {
 
                 <div className={styles.containerLogo}>
                     <img className={styles.imgLogo} src={ Logo } alt="Logo Gamer Sector" />
-                    <a href='' className={styles.logoLink}> 
+                    <Link to='/' className={styles.logoLink}> 
                         <span className={styles.fontColor}> GAMER </span> 
                         SECTOR
-                    </a>
+                    </Link>
                 </div>
 
                 <div className={styles.rightContainer}>
                     
                     <SearcherBar />
-
-                    {/* Modal sesión actualmente hardcodeado */}
-                    {
-                        !isLogged 
-                        && 
-                        <a className={styles.loginBtn} href="/login">
+                    {   
+                        isLogged &&
+                        <Link className={styles.loginBtn} to="/login">
                                 INICIAR SESIÓN
-                        </a>
+                        </Link>
+                        &&
+                        <img src={ UserIcon } className={styles.userIcon} alt="Icono de usuario" />
+
+                        ||
+                        <Link className={styles.loginBtn} to="/logout">
+                            CERRAR SESIÓN
+                        </Link>
+                        // Avatar 
                     }
-                    
+
                 </div>
 
             </header>

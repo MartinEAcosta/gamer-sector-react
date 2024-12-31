@@ -1,16 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Header , Nav , CarouselNotices, Footer, CarouselProducts } from './components';
-import { data } from './helpers/dataCarouselImages';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
+import { GamerShopApp } from './GamerShopApp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Header />
-    <Nav />
-    <CarouselNotices data={ data } />
-    <CarouselProducts title={ "Ultimas Novedades" }/>
-    <CarouselProducts title={ "Mejores Valorados" }/>
-    <Footer />
+    <BrowserRouter>    
+      <GamerShopApp />      
+    </BrowserRouter>
   </React.StrictMode>,
 )

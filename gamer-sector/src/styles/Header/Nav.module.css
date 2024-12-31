@@ -10,7 +10,7 @@
     color: var(--whiteCustom);
     position: sticky;
     z-index: 5;
-    top: 6.8rem;
+    top: 6.5rem;
     height: 5rem;
     box-shadow: var(--boxShadow);
 }
@@ -36,7 +36,7 @@
     border: none;
     font-size: 17px;
     padding: 17px;
-    color: #fff;
+    color: var(--whiteCustom);
 }
 
 .drobDown {

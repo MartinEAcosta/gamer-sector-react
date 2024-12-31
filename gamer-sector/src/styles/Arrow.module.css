@@ -2,7 +2,7 @@
 hover:scale-105 delay-200 flex ${ tailwindProp } 
 absolute justify-center self-center bg-slate-50 
 rounded-full h-14 w-12 shadow-2xl*/
-
+@import "./variables.css";
 :root {
     --bgColor: #eeebeb;
 }
@@ -15,7 +15,7 @@ rounded-full h-14 w-12 shadow-2xl*/
     border-radius: 20px;
     justify-content: center;
     align-self: center;
-    height: 9%;
+    height: 10%;
     width: 3%;
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     transition: transform 0.2s ease-in-out;
@@ -34,5 +34,5 @@ rounded-full h-14 w-12 shadow-2xl*/
 }
 
 .svg{
-    margin: auto;
+    padding: auto;
 }

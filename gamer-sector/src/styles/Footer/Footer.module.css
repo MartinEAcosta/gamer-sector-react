@@ -1,0 +1,80 @@
+@import '../variables.css';
+
+/* "bg-slate-900 flex-row px-10" */
+.footerContainer{
+    background-color: var(--primaryColor);
+    padding: 0px 3% 0px 3% ;
+}
+
+/* "grid grid-cols-5 grid-rows-2 items-center" */
+.gridContent{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-areas: 
+        "about about about . "
+        ". . subscription subscription"
+        "map map map map ";
+    align-items: center;
+    gap: 2.5rem;
+}
+
+/* 'col-start-1 col-end-4 row-start-1  text-slate-100 text-xl' */
+.aboutSection{
+    color: var(--whiteCustom);
+    grid-area: about;
+    font-size: x-large;
+}
+
+
+/* "text-2xl font-bold font-roboto py-5 text-amber-500" */
+.titleAbout{
+    font-size: x-large;
+    font-weight: bold;
+    font-family: var(--secondaryFont);
+    color: var(--brandColor);
+    padding: 1rem 0 1rem;
+}
+
+/* "text-lg font-roboto" */
+.textAbout{
+    font-family: var(--primaryFont);
+    color: var(--whiteCustom);
+    font-size: large;
+}
+
+.formContainer{
+    grid-area: subscription;
+}
+
+
+/* "grid grid-flow-col col-start-1 col-end-6 row-start-2 mt-40 font-roboto text-center text-slate-100 border-opacity-40 border-t-slate-600 border-t py-5" */
+.map{
+    grid-area: map;
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    border-top: solid thin;
+    border-color: rgba(248, 250, 252, 0.4);
+    padding-top: 5rem;
+
+}
+
+/* "flex-col flex m-5" */
+
+.colFooter{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* "text-lg my-2 hover:text-slate-300" */
+.textMap{
+    font-size: large;
+    margin-top: 1rem;
+    color: var(--whiteCustom);
+}
+
+a:hover{
+    color: var(--brandColor);
+}

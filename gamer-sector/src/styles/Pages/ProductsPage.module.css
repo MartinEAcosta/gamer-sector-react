@@ -1,0 +1,6 @@
+@import '../variables.css';
+
+.mainContainer{
+    display: flex;
+    text-align: center;
+}

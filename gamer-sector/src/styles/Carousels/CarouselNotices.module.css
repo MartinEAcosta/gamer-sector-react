@@ -1,0 +1,27 @@
+@import '../variables.css';
+
+/* relative drop-shadow-2xl */
+.carouselContainer{
+    position: relative;
+    box-shadow: var(--boxShadow);
+}
+
+/* flex items-center justify-center */
+.sponsorImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* absolute left-10 cursor-pointer flex */
+.btnArrow{
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+}
+
+.slideHidden{
+    display: none;
+}
+
+

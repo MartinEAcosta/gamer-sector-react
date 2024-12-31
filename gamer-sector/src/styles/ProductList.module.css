@@ -1,0 +1,6 @@
+@import './variables.css';
+
+.containerCards{
+    width: 80%;
+    margin-left: 1.5rem;
+}

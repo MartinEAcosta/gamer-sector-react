@@ -1,0 +1,57 @@
+@import '../variables.css';
+
+.containerForm{
+    color: var(--whiteCustom);
+}
+
+/* "text-2xl text-center font-bold text-amber-500" */
+.titleForm{
+    font-size: x-large;
+    text-align: center;
+    font-weight: bold;
+    color: var(--brandColor);
+}
+
+/* "text-lg text-center font-roboto my-5" */
+.textForm{
+    text-align: center;
+    font-family: var(--fontSecondary);
+    margin: 1rem 0 1rem;
+}
+
+/* "flex border rounded-3xl w-3/4 m-auto" */
+.form{
+    display: flex;
+    border: solid;
+    border-radius: 2rem;
+    border-width: 0.1rem;
+    color: var(--brandColor);
+    margin: auto;
+    width: 75%;
+}
+
+/* "mx-5 my-3 px-3 bg-inherit focus:outline-none valid:border-red-600" */
+.inputEmail{
+    width: 100%;
+    margin: 1rem 1rem 1rem 1rem;
+    background: inherit;
+    color: var(--whiteCustom);
+}
+
+.inputEmail:focus{
+    outline: none;
+}
+
+/* "rounded-3xl font-semibold bg-slate-700 bg-opacity-30 hover:text-amber-500 hover:bg-slate-800 text-center border-l h-auto w-full " */
+.btnSumbit{
+    color: var(--whiteCustom);
+    padding: 0px 2.5rem 0px 2.5rem;
+    border-radius: 2rem;
+    background-color: #1a2236;
+    font-weight: 500;
+}
+
+.btnSumbit:hover{
+    background-color: var(--lightPrimary);
+    color: var(--brandColor);
+}

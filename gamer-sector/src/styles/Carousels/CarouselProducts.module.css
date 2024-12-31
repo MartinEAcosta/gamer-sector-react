@@ -1,0 +1,27 @@
+@import '../variables.css';
+
+/* relative m-10 */
+.sectionCarousel{
+    position: relative;
+    margin: 3%;
+}
+
+/* "p-8 text-2xl text-center font-kanit text-white" */
+.titleCarousel{
+    text-align: center;
+    font-family: var(--fontPrimary);
+    color: var(--whiteCustom);
+    font-size: x-large;
+    padding: 8px;
+}
+
+/* 'bg-slate-200 shadow-2xl rounded-xl flex justify-between' */
+.containerCarousel{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 0.75rem;
+    background-color: rgba(245, 245, 245, 0.90);
+    box-shadow: var(--boxShadow);
+
+}

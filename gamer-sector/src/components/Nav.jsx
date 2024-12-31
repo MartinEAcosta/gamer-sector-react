@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import DropDownArrow from '../assets/dropdown-arrow-svgrepo-com.svg'
 import styles from '../styles/Header/Nav.module.css'
-import '../styles/Nav.css';
 import { DropDownCategory } from './DropDownCategory';
+import { Link } from 'react-router-dom';
 
 
 export const Nav = () => {
@@ -27,8 +27,8 @@ export const Nav = () => {
                     onMouseLeave={ handleMouseLeave }
                 >
 
-                    <a className={`${styles.navbarItem} ${styles.dropBtn}`}
-                        href="">
+                    <Link className={`${styles.navbarItem} ${styles.dropBtn}`}
+                        to="/category">
 
                         CATEGORIAS 
 
@@ -37,15 +37,17 @@ export const Nav = () => {
                             // alt="Flecha desplegable" className={`' ${isHovered ? '' : ''}`} 
                             alt="Flecha desplegable" className={`${styles.arrowDefault} ${!isHovered ? styles.arrowAnimation : ''}`}
                         />
-                    </a>
+                    </Link>
 
-                    {isHovered && 
+                    {
+                        isHovered 
+                        && 
                         <DropDownCategory />
                     }
 
                 </div>
-                <a className="font-roboto font-bold hover:text-amber-500 hover:opacity-85" href="">PRODUCTOS</a>
-                <a className="font-roboto font-bold hover:text-amber-500 hover:opacity-85" href="">SOPORTE</a>
+                <Link className={styles.navbarItem} to="/products" >PRODUCTOS</ Link>
+                <Link className={styles.navbarItem} to="/support" >SOPORTE</ Link>
             </nav>
         </>
     );

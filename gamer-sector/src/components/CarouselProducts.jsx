@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import { CardProduct, Arrow } from '../components';
+import styles from '../styles/Carousels/CarouselProducts.module.css';
 
 export const CarouselProducts = ( { title } ) => {
 
   return (
-    <section className="relative m-10">
+    <section className={styles.sectionCarousel}>
 
-        <h1 className="p-8 text-2xl text-center font-kanit text-white">{ title }</h1>
-        <div className='bg-slate-200 shadow-2xl rounded-xl flex justify-between'>
+        <h1 className={styles.titleCarousel}>{ title }</h1>
+        <div className={styles.containerCarousel}>
           <Arrow direction="back" />
 
           {/* Map */}

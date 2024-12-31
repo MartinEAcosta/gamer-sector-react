@@ -1,20 +1,21 @@
 import PropTypes from 'prop-types';
+import styles from '../styles/Carousels/IndicatorsCarousel.module.css'
 
 export const IndicatorsCarousel = ( { data , currentSlide , onIndicator } ) => {
 
     return (
     <> 
-        <div className='w-full h-full flex justify-center space-x-10 z-0'>
-        {data.map( ( item , idx ) => {
-            return (
-                <div 
-                    className={ idx === currentSlide ? 'indicator' : 'indicator indicator-inactive' } 
-                    data-id={ idx } key={ item.id } onClick={ onIndicator }
-                    aria-label='{ `Go to slide ${ idx + 1 ` }'
-                />
-            );
-        })}
-    </div>
+        <div className={styles.containerIndicators}>
+            {data.map( ( item , idx ) => {
+                return (
+                    <div 
+                        className={`${styles.indicator} ${ idx === currentSlide ? '' : styles.indicatorInactive } }`}
+                        data-id={ idx } key={ item.id } onClick={ onIndicator }
+                        aria-label={`Go to slide ${idx}`}
+                    />
+                );
+            })}
+        </div>
     </>
     );
     
