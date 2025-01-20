@@ -1,4 +1,4 @@
-@import '../variables.css';
+@import '../../styles/variables.css';
 
 /* "bg-slate-800 flex justify-evenly text-slate-100 shadow-xl z-10 sticky top-21 items-center" */
 
@@ -13,6 +13,7 @@
     top: 6.5rem;
     height: 5rem;
     box-shadow: var(--boxShadow);
+    width: 100%;
 }
 
 /* "dropBtn flex font-roboto font-bold hover:text-amber-500 hover:opacity-85" */
@@ -20,6 +21,8 @@
     display: flex;
     font-family: var(--fontSecondary);
     font-weight: bold;
+    text-decoration: none;
+    color: var(--whiteCustom);
     width: 9rem;
 }
 

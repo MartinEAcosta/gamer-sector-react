@@ -1,12 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 @layer base{
   
 }
 
 body{
+  margin: 0px;
   background: #1f2937;
 }
 

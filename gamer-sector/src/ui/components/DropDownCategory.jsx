@@ -1,4 +1,4 @@
-import styles from '../styles/Header/DropDownCategory.module.css'
+import styles from '../styles/DropDownCategory.module.css'
 
 export const DropDownCategory = (  ) => {
     return (

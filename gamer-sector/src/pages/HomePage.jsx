@@ -1,4 +1,5 @@
-import { Header, Nav, CarouselNotices, CarouselProducts, Footer } from "../components";
+import { CarouselNotices, CarouselProducts, Footer } from "../components";
+import { Header, Nav } from "../ui";
 import { data } from '../helpers/dataCarouselImages';
 
 

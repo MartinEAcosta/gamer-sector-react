@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import DropDownArrow from '../assets/dropdown-arrow-svgrepo-com.svg'
-import styles from '../styles/Header/Nav.module.css'
+import DropDownArrow from '../../assets/dropdown-arrow-svgrepo-com.svg';
+import styles from '../styles/Nav.module.css';
 import { DropDownCategory } from './DropDownCategory';
 import { Link } from 'react-router-dom';
 

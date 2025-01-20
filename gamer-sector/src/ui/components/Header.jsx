@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Logo from '../assets/joystick.svg';
-import UserIcon from '../assets/usericon.svg'
+import Logo from '../../assets/joystick.svg';
+import UserIcon from '../../assets/usericon.svg'
 import { SearcherBar } from './SearcherBar';
-import styles from '../styles/Header/Header.module.css';
+import styles from '../styles/Header.module.css';
 import { Link } from 'react-router-dom';
 
 export const Header = () => {
