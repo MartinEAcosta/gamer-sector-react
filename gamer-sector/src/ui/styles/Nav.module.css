@@ -2,6 +2,10 @@
 
 /* "bg-slate-800 flex justify-evenly text-slate-100 shadow-xl z-10 sticky top-21 items-center" */
 
+* {
+    box-sizing: border-box;
+}
+
 .navContainer{
     display: flex;
     justify-content: space-evenly;
@@ -23,29 +27,19 @@
     font-weight: bold;
     text-decoration: none;
     color: var(--whiteCustom);
-    width: 9rem;
 }
 
 .navbarItem:hover{
     color: var(--brandColor);
 }
 
-* {
-    box-sizing: border-box;
-}
-
 .dropBtn {
     display: flex;
     border: none;
     font-size: 17px;
-    padding: 17px;
     color: var(--whiteCustom);
 }
 
-.drobDown {
-    position: relative;
-    display: inline-block;
-}
 
 .arrowDefault {
     transition-property: transform;
@@ -60,9 +54,13 @@
     transform: rotate(-90deg); 
 }
 
+.btnDown {
+    position: relative; /* Asegura que el menú desplegable se posicione correctamente */
+    display: inline-block;
+}
 
-.dropDown:hover .dropDownContent {
-display: block;
+.dropDown:hover {
+    display: block;
 }
 
 .dropDown:hover .dropBtn {

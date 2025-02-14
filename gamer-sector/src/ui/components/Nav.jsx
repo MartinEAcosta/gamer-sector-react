@@ -7,20 +7,25 @@ import { Link } from 'react-router-dom';
 
 export const Nav = () => {
 
-    const [isHovered, setHovered] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
+    let timeoutId = null;
 
     const handleMouseEnter = () => {
-        setHovered(true);
+        if (timeoutId) clearTimeout(timeoutId);
+        setIsHovered(true);
     }
 
     const handleMouseLeave = () => {
-        setHovered(false);
+        timeoutId = setTimeout(() => {
+            setIsHovered(false);
+        }, 200);
     }
 
 
     return (
         <>
             <nav className={styles.navContainer}>
+
                 <div 
                     className={styles.btnDown} 
                     onMouseEnter={ handleMouseEnter }
@@ -37,17 +42,23 @@ export const Nav = () => {
                             // alt="Flecha desplegable" className={`' ${isHovered ? '' : ''}`} 
                             alt="Flecha desplegable" className={`${styles.arrowDefault} ${!isHovered ? styles.arrowAnimation : ''}`}
                         />
+
                     </Link>
-
-                    {
-                        isHovered 
-                        && 
-                        <DropDownCategory />
+                    
+                    { isHovered &&    
+                        <div 
+                            className={`${styles.dropDownContainer}`}
+                            >
+                            
+                                <DropDownCategory />
+                        </div>
                     }
-
+                    
                 </div>
+
                 <Link className={styles.navbarItem} to="/products" >PRODUCTOS</ Link>
                 <Link className={styles.navbarItem} to="/support" >SOPORTE</ Link>
+
             </nav>
         </>
     );

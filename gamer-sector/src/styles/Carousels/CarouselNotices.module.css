@@ -3,7 +3,8 @@
 /* relative drop-shadow-2xl */
 .carouselContainer{
     position: relative;
-    box-shadow: var(--boxShadow);
+    height: 100vh;
+    margin-bottom: -8rem;
 }
 
 /* flex items-center justify-center */
@@ -12,6 +13,10 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    object-fit: contain;
+    max-height: 75%;
+    margin-top: -30px;
+    box-shadow: var(--boxShadow);
 }
 
 /* absolute left-10 cursor-pointer flex */

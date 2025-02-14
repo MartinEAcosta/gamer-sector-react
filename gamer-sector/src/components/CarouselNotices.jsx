@@ -12,7 +12,7 @@ import styles from '../styles/Carousels/CarouselNotices.module.css';
         return(
             <>
                 <section className={styles.carouselContainer}>
-
+                    
                     <div className={styles.sponsorImage}>
 
                         <div className={styles.btnArrow} onClick={ onPrevSlide }>

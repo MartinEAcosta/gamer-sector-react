@@ -1,38 +1,31 @@
 @import '../../styles/variables.css';
 
-.navbarItem{
-    display: flex;
+.dropDownItem{
     font-family: var(--fontSecondary);
     font-weight: bold;
-    width: 9rem;
+    font-size: 17px;
+    width: auto;
 }
 
-.navbarItem:hover{
+.dropDownItem:hover{
     color: var(--brandColor);
 }
 
 .dropDownContent {
-    display: block;
-    background: var(--lightPrimary);
+    background-color: var(--lightPrimary);
     position: absolute;
-    text-align: center;
     z-index: 1;
+    list-style: none;
+    padding: 10px;
+    margin-top: 30px;
+    width: 100%;
+    text-align: left;
 }
-
-.dropDownContent li {
-    display: block;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
 
 /* "text-white font-roboto font-bold hover:text-amber-500 py-3 px-5" */
 .categoryName{
     color: var(--whiteCustom);
     font-family: var(--fontPrimary);
-    font-weight: bold;
-    margin: 10px;
 }
 
 .categoryName:hover{

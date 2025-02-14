@@ -25,6 +25,7 @@ export const Header = () => {
                 <div className={styles.rightContainer}>
                     
                     <SearcherBar />
+                    
                     {   
                         isLogged &&
                         <Link className={styles.loginBtn} to="/login">
