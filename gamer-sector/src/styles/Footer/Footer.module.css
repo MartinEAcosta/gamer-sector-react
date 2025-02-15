@@ -31,14 +31,14 @@
 .titleAbout{
     font-size: x-large;
     font-weight: bold;
-    font-family: var(--secondaryFont);
+    font-family: var(--fontSecondary);
     color: var(--brandColor);
     padding: 1rem 0 1rem;
 }
 
 /* "text-lg font-roboto" */
 .textAbout{
-    font-family: var(--primaryFont);
+    font-family: var(--fontPrimary);
     color: var(--whiteCustom);
     font-size: large;
 }
@@ -54,10 +54,10 @@
     display: grid;
     grid-auto-flow: column;
     justify-items: center;
+    align-items: center;
     border-top: solid thin;
     border-color: rgba(248, 250, 252, 0.4);
-    padding-top: 5rem;
-
+    padding-top: 3rem;
 }
 
 /* "flex-col flex m-5" */
@@ -70,9 +70,20 @@
 
 /* "text-lg my-2 hover:text-slate-300" */
 .textMap{
-    font-size: large;
-    margin-top: 1rem;
+    text-decoration: none;
+    font-family: var(--fontPrimary);
+    margin-top: 0.5rem;
+    margin-bottom: 0px;
     color: var(--whiteCustom);
+}
+
+.socialMediaText{
+    display: flex;
+    align-items: center;
+}
+
+.socialMediaSVG{
+    margin-right: 0.5rem;
 }
 
 a:hover{

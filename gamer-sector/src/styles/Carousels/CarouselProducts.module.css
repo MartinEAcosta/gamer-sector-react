@@ -9,7 +9,7 @@
 /* "p-8 text-2xl text-center font-kanit text-white" */
 .titleCarousel{
     text-align: center;
-    font-family: var(--fontPrimary);
+    font-family: var(--fontSecondary);
     color: var(--whiteCustom);
     font-size: x-large;
     padding: 8px;

@@ -1,7 +1,13 @@
 // Decidido realizarse de forma estatica ya que no seria la idea ser modificado.
 
 import { SubscriptionForm } from "./SubscriptionForm";
+
+import InstagramSVG  from '../assets/instagram-white.svg';
+import FacebookSVG  from '../assets/facebook-white.svg';
+import XSVG  from '../assets/x-white.svg';
+
 import styles from "../styles/Footer/Footer.module.css";
+
 
 export const Footer = () => {
     return (
@@ -28,9 +34,18 @@ export const Footer = () => {
                     <div className={styles.map}>
 
                         <div className={styles.colFooter}>
-                            <a href="" className={styles.textMap}>Instagram</a>
-                            <a href="" className={styles.textMap}>Facebook</a>
-                            <a href="" className={styles.textMap}>Twitter</a>
+                            <a href="" className={` ${styles.textMap} ${styles.socialMediaText}`}> 
+                                <img src={ InstagramSVG } alt="Instagram Icon" className={styles.socialMediaSVG} />
+                                Instagram
+                            </a>
+                            <a href="" className={` ${styles.textMap} ${styles.socialMediaText}`}>
+                                <img src={ FacebookSVG } alt="Facebook Icon" className={styles.socialMediaSVG} />
+                                Facebook
+                            </a>
+                            <a href="" className={` ${styles.textMap} ${styles.socialMediaText}`}>
+                                <img src={ XSVG } alt="Twitter Icon" className={styles.socialMediaSVG} />
+                                Twitter
+                            </a>
                         </div>
 
                         <div className={styles.colFooter}>

@@ -6,9 +6,9 @@
 
 /* "text-2xl text-center font-bold text-amber-500" */
 .titleForm{
+    font-family: var(--fontSecondary);
     font-size: x-large;
     text-align: center;
-    font-weight: bold;
     color: var(--brandColor);
 }
 
@@ -36,6 +36,7 @@
     margin: 1rem 1rem 1rem 1rem;
     background: inherit;
     color: var(--whiteCustom);
+    border: none;
 }
 
 .inputEmail:focus{
@@ -46,8 +47,10 @@
 .btnSumbit{
     color: var(--whiteCustom);
     padding: 0px 2.5rem 0px 2.5rem;
+    font-family: var(--fontSecondary);
     border-radius: 2rem;
     background-color: #1a2236;
+    border: none;
     font-weight: 500;
 }
 
