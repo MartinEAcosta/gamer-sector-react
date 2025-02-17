@@ -2,9 +2,92 @@
 
 .loginContainer{
     display: flex;
-    justify-content: center;
-    border-style: solid;
-    background-color: rgba(245, 245, 245, 0.1);
+    border-radius: 60px;
+    background-color: rgba(245, 245, 245, 0.04);
     backdrop-filter: blur(20px);
+    padding: 60px;
+    box-shadow: var(--boxShadow);
 }
 
+.subtitle{
+    font-family: var(--fontSecondary);
+    color: var(--whiteCustom);
+}
+
+.welcomeMessage{
+    align-items: center;
+    text-align: center;
+}
+
+.leftContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+}
+
+.rightContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    border-left: solid thin;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.labelText{
+    width: 55%;
+    text-align: left;
+    display: block;
+    font-family: var(--fontSecondary);
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.inputForm{
+    margin: 0.8rem;
+    height: 2.5rem;
+    width: 60%;
+    padding: 15px;
+    color: var(--whiteCustom);
+    background-color: transparent;
+    border: solid thin;
+    border-radius: 20px;
+    font-family: var(--fontPrimary);
+    font-weight: 200;
+}
+
+.inputForm:focus{
+    outline: none;
+}
+
+.btnSumbit{
+    height: 2.5rem;
+    width: 60%;
+    margin-top: 20px;
+    border: none;
+    color: var(--whiteCustom);
+    background-image: linear-gradient(315deg, var(--primaryShadow) 34%, var(--primaryColor) 66%);
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btnSumbit:hover{
+    font-weight: bolder;
+    color: var(--brandColor);
+    transform: scale(1.05);
+    box-shadow: 20px 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.smallText{
+    text-decoration: underline;
+    font-family: var(--fontPrimary);
+    color: var(--whiteCustom);
+}

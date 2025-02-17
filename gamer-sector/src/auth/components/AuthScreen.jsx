@@ -4,9 +4,9 @@ import styles from '../styles/AuthScreen.module.css';
 export const AuthScreen = () => {
     return (
         <>
-            <section className={styles.authContainer}>
+            <div className={styles.authContainer}>
                 <FormLogin />
-            </section>
+            </div>
         </>
     )
 }
