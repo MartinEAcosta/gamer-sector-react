@@ -1,8 +1,10 @@
-import { AuthScreen } from "../auth/components/AuthScreen"
-import { Footer } from "../components"
-import { Header, Nav } from "../ui"
+import { AuthScreen } from "../components";
+import { Footer } from "../../components";
+
+import { Header, Nav } from "../../ui/components/";
 
 export const LoginPage = () => {
+
     return (
         <>
             <Header />

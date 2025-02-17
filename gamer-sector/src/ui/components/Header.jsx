@@ -1,14 +1,23 @@
-import { useState } from 'react';
 import Logo from '../../assets/joystick.svg';
-import UserIcon from '../../assets/usericon.svg'
 import { SearcherBar } from './SearcherBar';
 import styles from '../styles/Header.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../auth';
 
 export const Header = () => {
 
-    // Provisorio para mostrar el iniciar sesión.
-    const [isLogged, setIsLogged] = useState(false);
+    const { logout } = useContext( AuthContext );
+    const navigate = useNavigate();
+
+    const onLogout = () => {
+        logout();
+
+        navigate('/login', {
+            replace: true
+        });
+    }
+
 
     return (
         <>
@@ -27,15 +36,13 @@ export const Header = () => {
                     <SearcherBar />
                     
                     {   
-                        isLogged &&
+                        !localStorage.getItem('user') &&
                         <Link className={styles.loginBtn} to="/login">
                                 INICIAR SESIÓN
                         </Link>
-                        &&
-                        <img src={ UserIcon } className={styles.userIcon} alt="Icono de usuario" />
-
                         ||
-                        <Link className={styles.loginBtn} to="/logout">
+
+                        <Link className={styles.loginBtn} onClick={ onLogout } >
                             CERRAR SESIÓN
                         </Link>
                         // Avatar 
