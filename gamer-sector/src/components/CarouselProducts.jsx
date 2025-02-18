@@ -1,8 +1,12 @@
 import PropTypes from 'prop-types';
 import { CardProduct, Arrow } from '../components';
 import styles from '../styles/Carousels/CarouselProducts.module.css';
+import { getProducts } from '../helpers/getProducts';
 
 export const CarouselProducts = ( { title } ) => {
+
+  // provisorio
+  const products = getProducts();  
 
   return (
     <section className={styles.sectionCarousel}>
@@ -12,9 +16,18 @@ export const CarouselProducts = ( { title } ) => {
           <Arrow direction="back" />
 
           {/* Map */}
-          <div>
-            <CardProduct id={ 1 } name={ "Auriculares Hyper X Cloud II" } price={ 300 } reviews={ 3 }/>
-          </div>
+          {
+            products.map( product => (
+                <CardProduct 
+                  key={product.id} 
+                  id={ product.id } 
+                  name={ product.name } 
+                  price={ product.price } 
+                  reviews={ 3 } 
+                  imgURL={product.image} 
+                />
+            ))
+          }
           {/*  */}
           
           <Arrow direction="forward"/>

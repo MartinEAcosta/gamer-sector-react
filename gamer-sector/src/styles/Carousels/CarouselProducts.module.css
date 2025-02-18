@@ -24,4 +24,5 @@
     background-color: rgba(245, 245, 245, 0.90);
     box-shadow: var(--boxShadow);
     height: 20%;
+    overflow: hidden;
 }
