@@ -1,5 +1,5 @@
 import { AuthScreen } from "../components";
-import { Footer } from "../../components";
+import { Footer } from "../../ui/index";
 
 import { Header, Nav } from "../../ui/components/";
 

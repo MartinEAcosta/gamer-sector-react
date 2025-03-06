@@ -1,11 +1,10 @@
-import { Footer } from "../components";
-import { Header, Nav } from "../ui";
+import { Header, Nav , Footer } from "../../ui";
 import { ProductList } from "../components/ProductList";
 import { SidebarNavigation } from "../components/SidebarNavigation";
-import styles from "../styles/Pages/ProductsPage.module.css";
+import styles from "../styles/ListOfProductsPage.module.css";
 
 
-export const ProductsPage = () => {
+export const ListOfProductsPage = () => {
     return (
         <>
             <Header />

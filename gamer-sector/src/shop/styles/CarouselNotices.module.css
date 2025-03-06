@@ -1,4 +1,4 @@
-@import '../variables.css';
+@import '../../styles/variables.css';
 
 /* relative drop-shadow-2xl */
 .carouselContainer{
@@ -20,14 +20,11 @@
 }
 
 /* absolute left-10 cursor-pointer flex */
-.btnArrow{
-    display: flex;
-    position: absolute;
-    cursor: pointer;
-}
+
 
 .slideHidden{
     display: none;
 }
+
 
 

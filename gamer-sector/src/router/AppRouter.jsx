@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import { LoginPage } from "../auth";
 import { PublicRoute } from "./PublicRoute";
-import { ShopRoutes } from "./ShopRoutes";
+import { ShopRoutes } from "../shop/routes/ShopRoutes";
 
 export const AppRouter = () => {
     return (

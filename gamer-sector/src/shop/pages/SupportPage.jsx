@@ -1,5 +1,4 @@
-import { Footer } from '../components';
-import { Header, Nav } from '../ui';
+import { Header, Nav , Footer } from '../../ui';
 
 export const SupportPage = () => {
     return (

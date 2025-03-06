@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import { IndicatorsCarousel } from '../components/IndicatorsCarousel';
-import { Arrow } from './ArrowButton';
-import { useCarousel } from '../hooks/useCarousel';
-import styles from '../styles/Carousels/CarouselNotices.module.css';
+import { IndicatorsCarousel } from './IndicatorsCarousel';
+import { useCarousel } from '../../hooks/useCarousel';
+import styles from '../styles/CarouselNotices.module.css';
+import { SliderButton } from '../../ui/components/SliderButton';
 
 // Pasadas via Props por el Main.jsx
 export const CarouselNotices = ( { data } ) =>{
@@ -14,9 +14,11 @@ export const CarouselNotices = ( { data } ) =>{
             <section className={styles.carouselContainer}>
                 
                 <div className={styles.sponsorImage}>
-
-                    <div className={styles.btnArrow} onClick={ onPrevSlide }>
-                        <Arrow direction="back" />
+                    
+                    <div 
+                        onClick={ onNextSlide }>
+                        <SliderButton 
+                            direction="back" />
                     </div>
                     
                     {data.map( ( item,idx ) => {
@@ -28,10 +30,12 @@ export const CarouselNotices = ( { data } ) =>{
                         );
                     })}
 
-                    <div className={styles.btnArrow} onClick={ onNextSlide }>
-                        <Arrow direction="forward" /> 
-                    </div> 
-    
+                    <div 
+                        onClick={ onPrevSlide }>
+                        <SliderButton 
+                            direction="forward" />
+                    </div>
+
                 </div>
 
                 <IndicatorsCarousel 

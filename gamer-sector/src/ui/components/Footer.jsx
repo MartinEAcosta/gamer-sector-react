@@ -2,11 +2,11 @@
 
 import { SubscriptionForm } from "./SubscriptionForm";
 
-import InstagramSVG  from '../assets/instagram-white.svg';
-import FacebookSVG  from '../assets/facebook-white.svg';
-import XSVG  from '../assets/x-white.svg';
+import InstagramSVG  from '../../assets/instagram-white.svg';
+import FacebookSVG  from '../../assets/facebook-white.svg';
+import XSVG  from '../../assets/x-white.svg';
 
-import styles from "../styles/Footer/Footer.module.css";
+import styles from "../styles/Footer.module.css";
 
 
 export const Footer = () => {

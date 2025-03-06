@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
-import { CardProduct, Arrow } from '../components';
-import styles from '../styles/Carousels/CarouselProducts.module.css';
-import { getProducts } from '../helpers/getProducts';
+import { CardProduct } from '../components';
+import { Arrow } from '../../ui/components/ArrowButton';
+import styles from '../styles/CarouselProducts.module.css';
+import { getProducts } from '../../helpers/getProducts';
 
 export const CarouselProducts = ( { title } ) => {
 
   // provisorio
   const products = getProducts();  
+ 
 
   return (
     <section className={styles.sectionCarousel}>
@@ -30,7 +32,7 @@ export const CarouselProducts = ( { title } ) => {
           }
           {/*  */}
           
-          <Arrow direction="forward"/>
+          <Arrow direction="forward"  />
         </div>
         
     </section>    

@@ -1,4 +1,4 @@
-@import '../variables.css';
+@import '../../styles/variables.css';
 
 /* 'w-full h-full flex justify-center space-x-10 z-0' */
 .containerIndicators{

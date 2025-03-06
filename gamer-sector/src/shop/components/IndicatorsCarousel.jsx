@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from '../styles/Carousels/IndicatorsCarousel.module.css'
+import styles from '../styles/IndicatorsCarousel.module.css'
 
 export const IndicatorsCarousel = ( { data , currentSlide , onIndicator } ) => {
 

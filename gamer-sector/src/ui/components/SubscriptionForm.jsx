@@ -1,4 +1,4 @@
-import styles from '../styles/Footer/SubscriptionForm.module.css'
+import styles from '../styles/SubscriptionForm.module.css';
 
 export const SubscriptionForm = () => {
     return (

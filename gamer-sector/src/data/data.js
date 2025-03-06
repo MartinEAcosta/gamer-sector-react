@@ -27,15 +27,6 @@ export const data = [
       "id": 3
     },
     {
-      "name": "Mouse Logitech G403",
-      "stock": 2,
-      "price": 7800,
-      "image": "https://www.venex.com.ar/products_images/1615402051_910-005631.jpg",
-      "offer": true,
-      "quantity": 0,
-      "id": 4
-    },
-    {
       "name": "Teclado Corsair K65 60%",
       "stock": 6,
       "price": 20000,
@@ -52,15 +43,6 @@ export const data = [
       "offer": false,
       "quantity": 0,
       "id": 6
-    },
-    {
-      "name": "Procesador Ryzen 5 3600x",
-      "stock": 4,
-      "price": 48000,
-      "image": "https://www.amd.com/system/files/2019-06/238593-ryzen-5-pib-left-facing-1260x709.png",
-      "offer": false,
-      "quantity": 0,
-      "id": 7
     },
     {
       "name": "Procesador Ryzen 7 5700x",

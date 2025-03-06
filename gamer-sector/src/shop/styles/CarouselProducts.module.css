@@ -1,4 +1,4 @@
-@import '../variables.css';
+@import '../../styles/variables.css';
 
 /* relative m-10 */
 .sectionCarousel{
@@ -19,6 +19,7 @@
 .containerCarousel{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0.5rem 2rem 0.5rem 2rem;
     border-radius: 0.75rem;
     background-color: rgba(245, 245, 245, 0.90);

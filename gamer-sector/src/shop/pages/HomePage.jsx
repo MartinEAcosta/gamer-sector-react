@@ -1,6 +1,6 @@
-import { CarouselNotices, CarouselProducts, Footer } from "../components";
-import { Header, Nav } from "../ui";
-import { data } from '../helpers/dataCarouselImages';
+import { CarouselNotices, CarouselProducts } from "../components";
+import { Header, Nav , Footer} from "../../ui";
+import { data } from '../../helpers/dataCarouselImages';
 
 
 export const HomePage = () => {

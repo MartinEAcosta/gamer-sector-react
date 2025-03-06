@@ -1,0 +1,40 @@
+@import '../../styles/variables.css';
+
+.containerSlider{
+    display: flex;
+    position: absolute;
+    height: 75vh;
+    align-items: center;
+    
+}
+
+
+.svgArrow{
+    width: 2rem;
+    height: 2rem;
+    overflow: hidden;
+}
+
+.btnForward{
+    right: 0%;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
+}
+
+.btnBack{
+    left: 0%;
+    background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.5));
+
+}
+
+.btnBack, .btnForward{
+    top: 0%;
+}
+
+.btnBack:hover {
+    background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.6));
+
+}
+
+.btnForward:hover {
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.6));
+}
