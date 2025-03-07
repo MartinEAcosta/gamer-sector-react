@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styles from '../styles/CardProduct.module.css';
 import { useNavigate } from 'react-router-dom';
 
-export const CardProduct = ( { id, name, price, reviews = 0 , imgURL } ) => {
+export const CardProduct = ( { id, name, price, reviews = 0 , image } ) => {
 
   const navigate = useNavigate();
 
@@ -11,7 +11,7 @@ export const CardProduct = ( { id, name, price, reviews = 0 , imgURL } ) => {
         onClick={ () => navigate(`/product/${ id }`) }
         className={styles.cardProduct}
         data-id={ id }>
-          <img src={imgURL} className="" alt={ name } />
+          <img src={image} className="" alt={ name } />
           <div className={styles.descContainer}>
             <h2 className={styles.nameProduct}>{ name }</h2>
             <h2 className={styles.priceText} > ${ price }</h2>
@@ -27,5 +27,5 @@ CardProduct.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   reviews: PropTypes.number.isRequired,
-  imgURL: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 }

@@ -10,7 +10,6 @@ export const ShopRoutes = () => {
                 <Route path="products" element={ <ListOfProductsPage /> } />
                 <Route path="/*" element={ <Navigate to="/" /> } />
             </Routes>
-
         </>
     )
 }

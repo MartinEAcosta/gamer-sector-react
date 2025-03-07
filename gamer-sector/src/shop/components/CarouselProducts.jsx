@@ -9,7 +9,6 @@ export const CarouselProducts = ( { title } ) => {
   // provisorio
   const products = getProducts();  
  
-
   return (
     <section className={styles.sectionCarousel}>
 
@@ -22,15 +21,11 @@ export const CarouselProducts = ( { title } ) => {
             products.map( product => (
                 <CardProduct 
                   key={product.id} 
-                  id={ product.id } 
-                  name={ product.name } 
-                  price={ product.price } 
-                  reviews={ 3 } 
-                  imgURL={product.image} 
+                  reviews={3}
+                  {... product} 
                 />
             ))
           }
-          {/*  */}
           
           <Arrow direction="forward"  />
         </div>
