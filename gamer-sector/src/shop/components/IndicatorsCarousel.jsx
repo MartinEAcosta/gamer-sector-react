@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from '../styles/IndicatorsCarousel.module.css'
 
-export const IndicatorsCarousel = ( { data , currentSlide , onIndicator } ) => {
+export const IndicatorsCarousel = ( { data , currentSlide = 0 , onIndicator } ) => {
 
     return (
     <> 

@@ -1,0 +1,36 @@
+@import '../../styles/variables.css';
+
+.anchorContainer{
+    margin: 2% 2% 2% 5%;
+}
+
+.smallText {
+    display: flex;
+    font-family: var(--fontPrimary);
+    font-weight: 400;
+    color: var(--brandColor);
+    text-align: center;
+}
+
+.smallText a{
+    text-decoration: underline;
+    color: var(--brandColor);
+    margin-right: 2px;
+}
+
+.containerCarousel{
+    width: 55%;
+    margin: 0% 0% 5% 5%;
+    max-height: 90vh;
+    background-color: var(--whiteCustom);
+    border-radius: 2rem;
+    box-shadow: var(--boxShadow);
+}
+
+.containerCarousel img {
+    display: flex;
+    margin: auto;
+    padding: 5%;
+    max-width: 90%;
+    height: auto;
+}

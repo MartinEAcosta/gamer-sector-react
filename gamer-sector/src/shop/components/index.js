@@ -1,5 +1,6 @@
-export * from '../components/CardProduct';
+export * from './CardProduct';
 export * from './CarouselNotices';
-export * from '../components/CarouselProducts'
-export * from '../components/IndicatorsCarousel';
+export * from './CarouselProducts'
+export * from './IndicatorsCarousel';
+export * from './ProductDetail';
 
