@@ -1,7 +1,12 @@
 @import '../../styles/variables.css';
 
+.containerMain{
+    display: flex;
+}
+
 .anchorContainer{
-    margin: 2% 2% 2% 5%;
+    padding-bottom: 1rem;
+    height: auto;
 }
 
 .smallText {
@@ -13,24 +18,48 @@
 }
 
 .smallText a{
-    text-decoration: underline;
+    text-decoration: none;
     color: var(--brandColor);
+    margin-left: 2px;
     margin-right: 2px;
+}
+
+.containerCarousel , .containerDetails{ 
+    background-color: rgb(230, 230, 230);
+    border-radius: 2rem;
+    max-height: 90vh;
+    box-shadow: var(--boxShadow);
 }
 
 .containerCarousel{
     width: 55%;
-    margin: 0% 0% 5% 5%;
-    max-height: 90vh;
-    background-color: var(--whiteCustom);
-    border-radius: 2rem;
-    box-shadow: var(--boxShadow);
+    margin: 1% 0% 5% 5%;
+    padding: 2rem;
 }
 
 .containerCarousel img {
     display: flex;
-    margin: auto;
-    padding: 5%;
-    max-width: 90%;
+    justify-self: center;
+    max-width: 60%;
     height: auto;
+}
+
+.containerDetails{
+    display: flex;
+    flex-direction: column;
+    width:  45%;
+    margin: 1% 5% 0% 1%;
+    padding: 1rem;
+}
+
+.containerDetails .nameProduct{
+    font-family: var(--fontPrimary);
+    font-weight: 400;
+    color: rgb(10, 10, 10);
+    margin: 0px;
+}
+
+.simpleText{
+    font-weight: 500;
+    font-family: var(--fontAlternative);
 }

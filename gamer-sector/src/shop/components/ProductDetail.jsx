@@ -19,17 +19,22 @@ export const ProductDetail = ( { id } ) => {
 
     return (
         <>
-            <div className={styles.anchorContainer}>
-                <small className={styles.smallText}> <Link to='/'>Home</Link>{'>'} <Link to={`/product/${product.id}`}> {product.name} </Link> </small>
-            </div>
-            
-            <div className={styles.containerCarousel}>
-                <img src={product.image} alt={product.name} />
-                
-            </div>
-            <div className={styles.containerDetails}>
-
-            </div>
+            <main className={styles.containerMain}>
+                <div className={styles.containerCarousel}>
+                    <div className={styles.anchorContainer}>
+                        <small className={styles.smallText}> <Link to='/'>Home</Link>{'>'} <Link to={`/product/${product.id}`}> {product.name} </Link> </small>
+                    </div>
+                    <img src={product.image} alt={product.name} />
+                    
+                </div>
+                <div className={styles.containerDetails}>
+                    <h1 className={styles.nameProduct}> { product.name } </h1>
+                    <p className={styles.simpleText}> Unidades restantes: { product.quantity } </p>
+                    <p className={styles.simpleText}> $ { product.price } </p>
+                    <button>Comprar</button>
+                    <button>Agregar al carrito</button>
+                </div>
+            </main>
         </>
     )
 }
