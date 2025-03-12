@@ -11,6 +11,7 @@
 .titleSection{
     color: var(--brandColor);
     font-family: var(--fontPrimary);
+    font-weight: 500;
     font-size: x-large;
     padding-bottom: 10px;
     text-align: center;
@@ -27,6 +28,8 @@
     color: var(--whiteCustom);
     margin: 0.2rem 1rem;
     display: flex;
+    font-family: var(--fontPrimary);
+    text-decoration: none;
     justify-content: space-between;
 }
 

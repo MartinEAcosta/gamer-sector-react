@@ -19,11 +19,13 @@ export const CarouselProducts = ( { title } ) => {
           {/* Map */}
           {
             products.map( product => (
-                <CardProduct 
-                  key={product.id} 
-                  reviews={3}
-                  {... product} 
-                />
+                <div key={product.id} className={styles.boxCard}>
+                  <CardProduct 
+                    key={product.id} 
+                    reviews={3}
+                    {... product} 
+                  />
+                </div>
             ))
           }
           

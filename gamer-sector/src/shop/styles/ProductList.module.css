@@ -2,5 +2,17 @@
 
 .containerCards{
     width: 80%;
-    margin-left: 1.5rem;
+    display: grid;
+    margin: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    background-color: rgb(240, 248, 255, 0.8);
+    border-radius: 2rem;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.cardContainer{
+    padding-left: 10px;
+    padding-right: 10px;
 }
