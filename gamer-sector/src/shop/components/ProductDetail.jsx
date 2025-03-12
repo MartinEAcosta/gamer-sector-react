@@ -4,9 +4,6 @@ import styles from '../styles/ProductDetail.module.css';
 import { useMemo } from "react";
 import { getProductsById } from "../../helpers/getProductsById";
 import { Link, Navigate } from "react-router-dom";
-import { Arrow } from '../../ui';
-import { SliderButton } from '../../ui/components/SliderButton';
-import { IndicatorsCarousel } from './IndicatorsCarousel';
 
 
 export const ProductDetail = ( { id } ) => {
@@ -29,10 +26,10 @@ export const ProductDetail = ( { id } ) => {
                 </div>
                 <div className={styles.containerDetails}>
                     <h1 className={styles.nameProduct}> { product.name } </h1>
-                    <p className={styles.simpleText}> Unidades restantes: { product.quantity } </p>
+                    <p className={`${styles.simpleText} ${styles.quantityText}`}> Unidades restantes: { product.quantity } </p>
                     <p className={styles.simpleText}> $ { product.price } </p>
-                    <button>Comprar</button>
-                    <button>Agregar al carrito</button>
+                    <button className={styles.btnBuy}>Comprar</button>
+                    <button className={styles.btnAddToCart}>Agregar al carrito</button>
                 </div>
             </main>
         </>

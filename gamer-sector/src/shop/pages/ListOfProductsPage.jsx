@@ -5,6 +5,8 @@ import styles from "../styles/ListOfProductsPage.module.css";
 
 
 export const ListOfProductsPage = () => {
+
+    
     return (
         <>
             <Header />

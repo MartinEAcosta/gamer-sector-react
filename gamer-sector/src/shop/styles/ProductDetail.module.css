@@ -27,12 +27,13 @@
 .containerCarousel , .containerDetails{ 
     background-color: rgb(230, 230, 230);
     border-radius: 2rem;
-    max-height: 90vh;
+    max-height: 70vh;
     box-shadow: var(--boxShadow);
 }
 
 .containerCarousel{
-    width: 55%;
+    width: 60%;
+    height: 90vh;
     margin: 1% 0% 5% 5%;
     padding: 2rem;
 }
@@ -56,10 +57,19 @@
     font-family: var(--fontPrimary);
     font-weight: 400;
     color: rgb(10, 10, 10);
-    margin: 0px;
+    margin: 0% 0% 40%;
 }
 
 .simpleText{
     font-weight: 500;
     font-family: var(--fontAlternative);
 }
+
+.btnBuy{
+
+}
+
+.btnAddToCart{
+
+}
+
