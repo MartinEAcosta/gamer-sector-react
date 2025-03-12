@@ -10,10 +10,10 @@ export const CarouselNotices = ( { data } ) =>{
 
     const { onNextSlide, onPrevSlide, onSpecificSlide, currentSlide } = useCarousel( { data } , 0 );
 
-    setTimeout( () => {
-        onNextSlide()
-    }, 3000);
-    
+    // setTimeout( () => {
+    //     onNextSlide()
+    // }, 3000);
+
     return(
         <>
             <section className={styles.carouselContainer}>
