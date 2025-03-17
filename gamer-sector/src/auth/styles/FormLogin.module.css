@@ -3,7 +3,7 @@
 .loginContainer{
     display: flex;
     border-radius: 60px;
-    background-color: rgba(245, 245, 245, 0.04);
+    background-color: rgba(45, 66, 96, 0.363);
     backdrop-filter: blur(20px);
     padding: 60px;
     box-shadow: var(--boxShadow);
@@ -43,29 +43,68 @@
 }
 
 .labelText{
-    width: 55%;
-    text-align: left;
-    display: block;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 25%;
+    padding: 1%;
     font-family: var(--fontSecondary);
-    font-size: 0.9rem;
-    color: rgba(0, 0, 0, 0.65);
+    font-size: 1rem;
+    color: var(--brandColor);
+    pointer-events: none;
+    transition: .3s all ;
+}
+
+.inputGroup{
+    position: relative;
+    width: 40vw;
+}
+
+.inputGroup input:focus~label ,
+.inputGroup input:valid~label{
+    background: linear-gradient(to bottom, var(--lightPrimary) 50%, transparent 50%);
+    width: 20%;
+    top: 20%;
+    border-radius: 5px 5px 0 0; /* Solo esquinas superiores */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.inputGroup input:not(:placeholder-shown) ~ label {
+    background-color: var(--lightPrimary);
+    top: 20%;
+}
+
+.inputForm::placeholder{
+    color: transparent;
+}
+
+.inputForm:focus::placeholder{
+    color: rgba(240, 240, 255, 0.5);
 }
 
 .inputForm{
     margin: 0.8rem;
     height: 2.5rem;
     width: 60%;
+    height: 60%;
     padding: 15px;
     color: var(--whiteCustom);
     background-color: transparent;
-    border: solid thin;
+    border: solid 2px;
     border-radius: 20px;
+    border-color: rgb(154, 154, 154);
     font-family: var(--fontPrimary);
     font-weight: 200;
+    transition: transform 0.3s ease-in;
 }
 
 .inputForm:focus{
     outline: none;
+    border: 0px;
+    transform: scale(1.05);
+    background-color: var(--lightPrimary);
+    box-shadow: var(--boxShadow);
 }
 
 .btnSumbit{

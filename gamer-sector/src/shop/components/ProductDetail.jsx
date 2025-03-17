@@ -27,7 +27,7 @@ export const ProductDetail = ( { id } ) => {
                 <div className={styles.containerDetails}>
                     <h1 className={styles.nameProduct}> { product.name } </h1>
                     <p className={`${styles.simpleText} ${styles.quantityText}`}> Unidades restantes: { product.quantity } </p>
-                    <p className={styles.simpleText}> $ { product.price } </p>
+                    <p className={`${styles.simpleText} ${styles.priceText}`}> $ { product.price } </p>
                     <button className={styles.btnBuy}>Comprar</button>
                     <button className={styles.btnAddToCart}>Agregar al carrito</button>
                 </div>
