@@ -35,6 +35,7 @@ export const FormLogin = () => {
       <section className={styles.loginContainer}>
         <div className={styles.leftContainer}>
           <h2 className={styles.subtitle}>Iniciar sesión</h2>
+
           <form className={styles.form} onSubmit={ onLogin }>
 
             <div className={styles.inputGroup}>
@@ -50,6 +51,9 @@ export const FormLogin = () => {
             <Link to="/forgot-password">
               <small className={styles.smallText}>¿Olvidaste tu contraseña?</small>
             </Link>
+            <Link to="/register">
+              <small className={styles.smallText}>¿No tenés cuenta? Registrate</small>
+            </Link>
 
             <input type="submit" 
                    value="Ingresar"  
@@ -58,7 +62,7 @@ export const FormLogin = () => {
           </form>
         </div>
         <div className={styles.rightContainer}>
-          <h2 className={` ${styles.subtitle} ${styles.welcomeMessage}`}>¡ Bienvenido a Gamer Sector !</h2>
+          <h2 className={` ${styles.subtitle} ${styles.welcomeMessage}`}>¡Bienvenido a Gamer Sector!</h2>
         </div>
       </section>
     </>

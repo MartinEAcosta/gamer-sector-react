@@ -39,17 +39,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
 }
 
 .labelText{
     position: absolute;
     transform: translateY(-50%);
     top: 50%;
-    left: 25%;
-    padding: 1%;
-    font-family: var(--fontSecondary);
-    font-size: 1rem;
+    left: 27%;
+    font-family: var(--fontPrimary);
     color: var(--brandColor);
     pointer-events: none;
     transition: .3s all ;
@@ -65,14 +62,23 @@
     background: linear-gradient(to bottom, var(--lightPrimary) 50%, transparent 50%);
     width: 20%;
     top: 20%;
+    color: var(--brandColor);
     border-radius: 5px 5px 0 0; /* Solo esquinas superiores */
     padding-left: 10px;
     padding-right: 10px;
 }
 
 .inputGroup input:not(:placeholder-shown) ~ label {
-    background-color: var(--lightPrimary);
+    background: linear-gradient(to bottom, var(--lightPrimary) 50%, transparent 50%);
+    border-radius: 5px 5px 0 0; /* Solo esquinas superiores */
+    width: 20%;
     top: 20%;
+}
+
+.inputGroup input:not(:placeholder-shown){
+    background-color: var(--lightPrimary);
+    transform: scale(1.05);
+    box-shadow: var(--boxShadow);
 }
 
 .inputForm::placeholder{
@@ -84,24 +90,21 @@
 }
 
 .inputForm{
-    margin: 0.8rem;
+    margin: 1rem;
     height: 2.5rem;
-    width: 60%;
+    width: 55%;
     height: 60%;
     padding: 15px;
     color: var(--whiteCustom);
-    background-color: transparent;
-    border: solid 2px;
-    border-radius: 20px;
-    border-color: rgb(154, 154, 154);
+    background-color: rgba(30, 45, 60, 0.5);
+    border-radius: 30px;
+    border-color: transparent;
     font-family: var(--fontPrimary);
-    font-weight: 200;
-    transition: transform 0.3s ease-in;
+    transition: transform 0.2s ease-in;
 }
 
 .inputForm:focus{
     outline: none;
-    border: 0px;
     transform: scale(1.05);
     background-color: var(--lightPrimary);
     box-shadow: var(--boxShadow);
@@ -111,11 +114,11 @@
     height: 2.5rem;
     width: 60%;
     margin-top: 20px;
-    border: none;
+    border: transparent;
     color: var(--whiteCustom);
     background-image: linear-gradient(315deg, var(--primaryShadow) 34%, var(--primaryColor) 66%);
     border-radius: 20px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .btnSumbit:hover{
@@ -123,6 +126,10 @@
     color: var(--brandColor);
     transform: scale(1.05);
     box-shadow: 20px 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.leftContainer a{
+    margin: 4px;
 }
 
 .smallText{
