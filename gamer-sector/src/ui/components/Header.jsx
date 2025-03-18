@@ -37,12 +37,12 @@ export const Header = () => {
                     
                     {   
                         !localStorage.getItem('user') &&
-                        <Link className={styles.loginBtn} to="/login">
+                        <Link className={styles.btnSesion} to="/login">
                                 INICIAR SESIÓN
                         </Link>
                         ||
 
-                        <Link className={styles.loginBtn} onClick={ onLogout } >
+                        <Link className={styles.btnSesion} onClick={ onLogout } >
                             CERRAR SESIÓN
                         </Link>
                         // Avatar 

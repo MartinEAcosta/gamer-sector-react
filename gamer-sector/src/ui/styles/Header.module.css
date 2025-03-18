@@ -59,14 +59,14 @@
 /* "hover:text-slate-300 text-slate-100 font-roboto font-bold pl-5 py-2 rounded-xl
                             "  */
 
-.loginBtn{
+.btnSesion{
     color: var(--whiteCustom);
     font-family: var(--fontPrimary);
     font-weight: 600;
-    margin: 10px;
+    margin: 10px 2rem;
     text-decoration: none;
 }
 
-.loginBtn:hover{
+.btnSesion:hover{
     opacity: 0.9;
 }
