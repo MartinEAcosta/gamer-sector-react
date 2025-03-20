@@ -44,8 +44,8 @@
 .labelText{
     position: absolute;
     transform: translateY(-50%);
+    width: 55%;
     top: 50%;
-    left: 27%;
     font-family: var(--fontPrimary);
     color: var(--brandColor);
     pointer-events: none;
@@ -54,6 +54,8 @@
 
 .inputGroup{
     position: relative;
+    place-content: center;
+    display: flex;
     width: 40vw;
 }
 
@@ -108,6 +110,46 @@
     transform: scale(1.05);
     background-color: var(--lightPrimary);
     box-shadow: var(--boxShadow);
+}
+
+.containerSocialMedia{
+    display: flex;
+    width: 100%;
+    place-content: center;
+}
+
+.btnGoogle , .btnFacebook{
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    border: transparent;
+    padding: 2%;
+    margin: 5px;
+    font-family: var(--fontPrimary);
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btnFacebook{
+    color: var(--whiteCustom);
+    background-color: rgb(36, 57, 102);
+}
+
+.btnFacebook:hover , .btnGoogle:hover{
+    box-shadow: var(--boxShadow);
+    transform: scale(1.02);
+    transition: all 0.2s;
+}
+
+.btnFacebook:hover{
+    background-color: rgb(30, 50, 95);
+    color: rgba(245, 245, 245, 0.80);
+}
+
+
+.socialMediaSVG{
+    width: 20px;
+    margin: 0 5px;
 }
 
 .btnSumbit{

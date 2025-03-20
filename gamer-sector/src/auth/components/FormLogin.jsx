@@ -1,9 +1,11 @@
+import { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from '../styles/FormLogin.module.css';
 
 import { useForm } from '../../hooks/useForm';
-import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
-import { Link, useNavigate } from 'react-router-dom';
+import FacebookSVG from '../../assets/facebook-white.svg';
+import GoogleSVG from '../../assets/google-color.svg';
 
 export const FormLogin = () => {
 
@@ -46,6 +48,19 @@ export const FormLogin = () => {
             <div className={styles.inputGroup}>
               <input type="password" name="password" id="password" value={password} placeholder="••••••••" className={styles.inputForm} onChange={onInputChange} required/>
               <label htmlFor="password" className={styles.labelText}>Contraseña</label>
+            </div>
+
+            <div className={styles.containerSocialMedia}>
+              <button className={styles.btnGoogle}>
+                <img src={ GoogleSVG } alt="Google Icon" className={styles.socialMediaSVG} />
+                Continuar con Google
+              </button>
+
+              <button className={styles.btnFacebook}>
+                <img src={ FacebookSVG } alt="Facebook Icon" className={styles.socialMediaSVG} />
+                Continuar con Facebook
+              </button>
+
             </div>
 
             <Link to="/forgot-password">
