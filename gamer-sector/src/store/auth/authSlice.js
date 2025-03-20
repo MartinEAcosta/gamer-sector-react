@@ -1,17 +1,37 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const templateSlice = createSlice({
-    name: 'template ',
+export const authSlice = createSlice({
+    name: 'auth',
     initialState: {
-        counter: 10
+        status: 'not-authenticated',
+        displayName: null, 
+        photoURL: null,
+        uid: null,        
     },
     reducers: {
-        increment: (state, /* action */ ) => {
-            state.counter += 1;
+
+        login: ( state, { payload } ) => {
+            state.status = 'authenticated',
+            state.displayName = payload.displayName,
+            state.photoURL = payload.photoURL,
+            state.uid = payload.uid
         },
+
+        logout: ( state ) => {
+            state.status = 'not-authenticated',
+            state.displayName = null,
+            state.photoURL = null,
+            state.uid = null
+        },
+        
+        checkingCredentials: ( state ) => {
+            state.status = 'checking';
+        }
+
+
     }
 });
 
 
 // Action creators are generated for each case reducer function
-export const { increment } = templateSlice.actions;
+export const { login } = authSlice.actions;

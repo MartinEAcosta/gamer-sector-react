@@ -6,8 +6,13 @@ import { useForm } from '../../hooks/useForm';
 import { AuthContext } from '../context/AuthContext';
 import FacebookSVG from '../../assets/facebook-white.svg';
 import GoogleSVG from '../../assets/google-color.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import { startGoogleSignIn } from '../../store/auth/thunks';
 
 export const FormLogin = () => {
+
+  const { } = useSelector( (state) => state.auth );
+  const dispatch = useDispatch();
 
   const { login } = useContext( AuthContext );
   const navigate = useNavigate();
@@ -16,6 +21,13 @@ export const FormLogin = () => {
     email : '',
     password : '',
   });
+
+  const onGoogleSignIn = ( e ) => {
+    e.preventDefault();
+    
+    dispatch( startGoogleSignIn() );
+
+  }
 
   const onLogin = ( e ) => {
     e.preventDefault();
@@ -29,7 +41,6 @@ export const FormLogin = () => {
     navigate( lastPath , {
       replace: true
     });
-
   }
 
   return (
@@ -41,7 +52,12 @@ export const FormLogin = () => {
           <form className={styles.form} onSubmit={ onLogin }>
 
             <div className={styles.inputGroup}>
-              <input type="email" autoComplete='off' name="email" id="email" value={email} placeholder="example@gmail.com" className={styles.inputForm} onChange={onInputChange} required />
+              <input 
+                type="email" autoComplete='off' 
+                name="email" id="email" 
+                value={email} placeholder="example@gmail.com" 
+                className={styles.inputForm} onChange={onInputChange} required 
+              />
               <label htmlFor="email" className={styles.labelText}>Email</label>
             </div>
 
@@ -51,7 +67,10 @@ export const FormLogin = () => {
             </div>
 
             <div className={styles.containerSocialMedia}>
-              <button className={styles.btnGoogle}>
+              <button 
+                className={styles.btnGoogle}
+                onClick={ onGoogleSignIn }
+              >
                 <img src={ GoogleSVG } alt="Google Icon" className={styles.socialMediaSVG} />
                 Continuar con Google
               </button>
