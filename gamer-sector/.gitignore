@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 
-gamer-sector/src/firebase/config.js
+src/firebase/config.js
 
 # Editor directories and files
 .vscode/*
