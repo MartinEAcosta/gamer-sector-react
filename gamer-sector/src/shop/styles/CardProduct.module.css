@@ -22,6 +22,19 @@ p-5 rounded-xl shadow-2xl hover:scale-105 hover:-rotate-1 transition-transform" 
     transform: rotate(-2deg) scale(1.02);
 }
 
+.containerFigure{
+    height: 60%;
+    margin: 0;
+}
+
+.imgProduct{
+    width: 100%;
+}
+
+.descContainer{
+    height: 40%;
+}
+
 /* 'whitespace-nowrap text-ellipsis overflow-hidden' */
 .nameProduct{
     font-size: medium;
@@ -31,6 +44,7 @@ p-5 rounded-xl shadow-2xl hover:scale-105 hover:-rotate-1 transition-transform" 
 }
 
 .priceText{
+    text-align: left;
     font-size: medium;
     color: green;
 }

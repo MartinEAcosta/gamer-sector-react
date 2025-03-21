@@ -1,4 +1,4 @@
-import { Header , Nav } from "../../ui/components";
+import { Footer, Header , Nav } from "../../ui/components";
 import { FormRegister } from "../components/FormRegister";
 import { AuthLayout } from "../layout/AuthLayout";
 
@@ -11,7 +11,7 @@ export const RegisterPage = () => {
             <AuthLayout title={'Crear una cuenta'} >
                 <FormRegister />
             </AuthLayout>
-        
+            <Footer />
         </>
     );
 }
