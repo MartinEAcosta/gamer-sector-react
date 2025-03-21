@@ -45,61 +45,76 @@ export const FormLogin = () => {
 
   return (
     <>
-      <section className={styles.loginContainer}>
-        <div className={styles.leftContainer}>
-          <h2 className={styles.subtitle}>Iniciar sesión</h2>
+      <form className={styles.form} onSubmit={onLogin}>
+        <div className={styles.inputGroup}>
+          <input
+            type="email"
+            autoComplete="off"
+            name="email"
+            id="email"
+            value={email}
+            placeholder="example@gmail.com"
+            className={styles.inputForm}
+            onChange={onInputChange}
+            required
+          />
+          <label htmlFor="email" className={styles.labelText}>
+            Email
+          </label>
+        </div>
 
-          <form className={styles.form} onSubmit={ onLogin }>
+        <div className={styles.inputGroup}>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            value={password}
+            placeholder="••••••••"
+            className={styles.inputForm}
+            onChange={onInputChange}
+            required
+          />
+          <label htmlFor="password" className={styles.labelText}>
+            Contraseña
+          </label>
+        </div>
 
-            <div className={styles.inputGroup}>
-              <input 
-                type="email" autoComplete='off' 
-                name="email" id="email" 
-                value={email} placeholder="example@gmail.com" 
-                className={styles.inputForm} onChange={onInputChange} required 
-              />
-              <label htmlFor="email" className={styles.labelText}>Email</label>
-            </div>
-
-            <div className={styles.inputGroup}>
-              <input type="password" name="password" id="password" value={password} placeholder="••••••••" className={styles.inputForm} onChange={onInputChange} required/>
-              <label htmlFor="password" className={styles.labelText}>Contraseña</label>
-            </div>
-
-            <div className={styles.containerSocialMedia}>
-              <button 
-                className={styles.btnGoogle}
-                onClick={ onGoogleSignIn }
-              >
-                <img src={ GoogleSVG } alt="Google Icon" className={styles.socialMediaSVG} />
-                Continuar con Google
-              </button>
-
-              <button className={styles.btnFacebook}>
-                <img src={ FacebookSVG } alt="Facebook Icon" className={styles.socialMediaSVG} />
-                Continuar con Facebook
-              </button>
-
-            </div>
-
-            <Link to="/forgot-password">
-              <small className={styles.smallText}>¿Olvidaste tu contraseña?</small>
-            </Link>
-            <Link to="/register">
-              <small className={styles.smallText}>¿No tenés cuenta? Registrate</small>
-            </Link>
-
-            <input type="submit" 
-                   value="Ingresar"  
-                   className={` ${styles.btnSumbit} `}
+        <div className={styles.containerSocialMedia}>
+          <button className={styles.btnGoogle} onClick={onGoogleSignIn}>
+            <img
+              src={GoogleSVG}
+              alt="Google Icon"
+              className={styles.socialMediaSVG}
             />
-          </form>
+            Continuar con Google
+          </button>
+
+          <button className={styles.btnFacebook}>
+            <img
+              src={FacebookSVG}
+              alt="Facebook Icon"
+              className={styles.socialMediaSVG}
+            />
+            Continuar con Facebook
+          </button>
         </div>
-        <div className={styles.rightContainer}>
-          <h2 className={` ${styles.subtitle} ${styles.welcomeMessage}`}>¡Bienvenido a Gamer Sector!</h2>
-        </div>
-      </section>
+
+        <Link to="/forgot-password">
+          <small className={styles.smallText}>¿Olvidaste tu contraseña?</small>
+        </Link>
+        <Link to="/register">
+          <small className={styles.smallText}>
+            ¿No tenés cuenta? Registrate
+          </small>
+        </Link>
+
+        <input
+          type="submit"
+          value="Ingresar"
+          className={` ${styles.btnSumbit} `}
+        />
+      </form>
     </>
-  )
+  );
 
 }

@@ -1,4 +1,4 @@
-import { AuthScreen } from "../components";
+import { AuthLayout, FormLogin } from "../components";
 import { Footer } from "../../ui/index";
 
 import { Header, Nav } from "../../ui/components/";
@@ -9,7 +9,9 @@ export const LoginPage = () => {
         <>
             <Header />
             <Nav />
-            <AuthScreen />
+            <AuthLayout title={'Iniciar Sesión'}>
+                <FormLogin />
+            </AuthLayout>
             <Footer />
         </>
     )

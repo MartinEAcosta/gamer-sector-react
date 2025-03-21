@@ -37,9 +37,10 @@ export const Header = () => {
                     
                     {   
                         !localStorage.getItem('user') &&
-                        <Link className={styles.btnSesion} to="/login">
+                        <Link className={styles.btnSesion} to="/auth/login">
                                 INICIAR SESIÓN
                         </Link>
+                        
                         ||
 
                         <Link className={styles.btnSesion} onClick={ onLogout } >

@@ -1,8 +1,45 @@
 @import '../../styles/variables.css';
 
 .authContainer{
-    background-color: #1b2845;
     background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
-    padding: 4rem 7rem 4rem 7rem;
+    padding: 5% 10% 5% 10%;
 }
 
+
+
+
+
+.loginContainer{
+    display: flex;
+    border-radius: 60px;
+    background-color: rgba(45, 66, 96, 0.363);
+    backdrop-filter: blur(20px);
+    padding: 60px;
+    box-shadow: var(--boxShadow);
+}
+
+.subtitle{
+    font-family: var(--fontSecondary);
+    color: var(--whiteCustom);
+}
+
+.welcomeMessage{
+    align-items: center;
+    text-align: center;
+}
+
+.leftContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+}
+
+.rightContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    border-left: solid thin;
+    border-color: rgba(255, 255, 255, 0.3);
+}

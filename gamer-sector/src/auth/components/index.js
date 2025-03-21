@@ -1,2 +1,2 @@
-export * from './AuthScreen';
+export * from '../layout/AuthLayout';
 export * from './FormLogin';
