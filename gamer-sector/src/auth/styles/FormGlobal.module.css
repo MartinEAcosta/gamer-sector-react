@@ -1,0 +1,146 @@
+@import '../../styles/variables.css';
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.labelText{
+    position: absolute;
+    transform: translateY(-50%);
+    width: 55%;
+    top: 50%;
+    font-family: var(--fontPrimary);
+    color: var(--brandColor);
+    pointer-events: none;
+    transition: .3s all ;
+}
+
+.inputContainer{
+    position: relative;
+    place-content: center;
+    display: flex;
+    width: 40vw;
+}
+
+.inputContainer input:focus~label ,
+.inputContainer input:valid~label{
+    background: linear-gradient(to bottom, var(--lightPrimary) 50%, transparent 50%);
+    width: 20%;
+    top: 20%;
+    color: var(--brandColor);
+    border-radius: 5px 5px 0 0; /* Solo esquinas superiores */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.inputContainer input:not(:placeholder-shown) ~ label {
+    background: linear-gradient(to bottom, var(--lightPrimary) 50%, transparent 50%);
+    border-radius: 5px 5px 0 0; /* Solo esquinas superiores */
+    width: 20%;
+    top: 20%;
+}
+
+.inputContainer input:not(:placeholder-shown){
+    background-color: var(--lightPrimary);
+    transform: scale(1.05);
+    box-shadow: var(--boxShadow);
+}
+
+.inputForm::placeholder{
+    color: transparent;
+}
+
+.inputForm:focus::placeholder{
+    color: rgba(240, 240, 255, 0.5);
+}
+
+.inputForm{
+    margin: 1rem;
+    height: 2.5rem;
+    width: 55%;
+    height: 60%;
+    padding: 15px;
+    color: var(--whiteCustom);
+    background-color: rgba(30, 45, 60, 0.5);
+    border-radius: 30px;
+    border-color: transparent;
+    font-family: var(--fontPrimary);
+    transition: transform 0.2s ease-in;
+}
+
+.inputForm:focus{
+    outline: none;
+    transform: scale(1.05);
+    background-color: var(--lightPrimary);
+    box-shadow: var(--boxShadow);
+}
+
+.containerSocialMedia{
+    display: flex;
+    width: 100%;
+    place-content: center;
+}
+
+.btnGoogle , .btnFacebook{
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    border: transparent;
+    padding: 2%;
+    margin: 5px;
+    font-family: var(--fontPrimary);
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btnFacebook{
+    color: var(--whiteCustom);
+    background-color: rgb(36, 57, 102);
+}
+
+.btnFacebook:hover , .btnGoogle:hover{
+    box-shadow: var(--boxShadow);
+    transform: scale(1.02);
+    transition: all 0.2s;
+}
+
+.btnFacebook:hover{
+    background-color: rgb(30, 50, 95);
+    color: rgba(245, 245, 245, 0.80);
+}
+
+
+.socialMediaSVG{
+    width: 20px;
+    margin: 0 5px;
+}
+
+.btnSumbit{
+    height: 2.5rem;
+    width: 60%;
+    margin-top: 20px;
+    border: transparent;
+    color: var(--whiteCustom);
+    background-image: linear-gradient(315deg, var(--primaryShadow) 34%, var(--primaryColor) 66%);
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btnSumbit:hover{
+    font-weight: bolder;
+    color: var(--brandColor);
+    transform: scale(1.05);
+    box-shadow: 20px 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+a{
+    margin: 0.5%;
+}
+
+.smallText{
+    text-decoration: underline;
+    font-family: var(--fontPrimary);
+    color: var(--whiteCustom);
+}

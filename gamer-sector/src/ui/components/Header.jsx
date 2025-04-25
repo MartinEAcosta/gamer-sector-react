@@ -2,16 +2,12 @@ import Logo from '../../assets/joystick.svg';
 import { SearcherBar } from './SearcherBar';
 import styles from '../styles/Header.module.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { useContext } from 'react';
-import { AuthContext } from '../../auth';
 
 export const Header = () => {
 
-    const { logout } = useContext( AuthContext );
     const navigate = useNavigate();
 
     const onLogout = () => {
-        logout();
 
         navigate('/login', {
             replace: true

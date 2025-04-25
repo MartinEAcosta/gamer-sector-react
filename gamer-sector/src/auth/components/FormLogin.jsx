@@ -1,20 +1,17 @@
-import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import global from '../styles/FormGlobal.module.css';
 import styles from '../styles/FormLogin.module.css';
 
 import { useForm } from '../../hooks/useForm';
-import { AuthContext } from '../context/AuthContext';
 import FacebookSVG from '../../assets/facebook-white.svg';
 import GoogleSVG from '../../assets/google-color.svg';
-import { useDispatch, useSelector } from 'react-redux';
-import { startFacebookSignIn, startGoogleSignIn } from '../../store/auth/thunks';
+// import { useDispatch, useSelector } from 'react-redux';
 
 export const FormLogin = () => {
 
-  const { } = useSelector( (state) => state.auth );
-  const dispatch = useDispatch();
+  // const { } = useSelector( (state) => state.auth );
+  // const dispatch = useDispatch();
 
-  const { login } = useContext( AuthContext );
   const navigate = useNavigate();
 
   const { email , password ,onInputChange } = useForm({
@@ -22,18 +19,18 @@ export const FormLogin = () => {
     password : '',
   });
 
-  const onGoogleSignIn = ( e ) => {
-    e.preventDefault();
+  // const onGoogleSignIn = ( e ) => {
+  //   e.preventDefault();
     
-    dispatch( startGoogleSignIn() );
+  //   dispatch( startGoogleSignIn() );
 
-  }
+  // }
 
-  const onFacebookSignIn = ( e ) => {
-    e.preventDefault();
+  // const onFacebookSignIn = ( e ) => {
+  //   e.preventDefault();
 
-    dispatch( startFacebookSignIn() );
-  }
+  //   dispatch( startFacebookSignIn() );
+  // }
 
   const onLogin = ( e ) => {
     e.preventDefault();
@@ -42,7 +39,6 @@ export const FormLogin = () => {
 
     console.log(email, password);
 
-    login(email);
 
     navigate( lastPath , {
       replace: true
@@ -51,7 +47,9 @@ export const FormLogin = () => {
 
   return (
     <>
-      <form className={styles.form} onSubmit={onLogin}>
+      <form 
+        className={ styles.form } 
+        onSubmit={ onLogin }>
         <div className={styles.inputGroup}>
           <input
             type="email"
@@ -88,7 +86,7 @@ export const FormLogin = () => {
         <div className={styles.containerSocialMedia}>
           <button 
             className={styles.btnGoogle} 
-            onClick={ onGoogleSignIn }
+            // onClick={ onGoogleSignIn }
           >
             <img
               src={GoogleSVG}
@@ -100,7 +98,7 @@ export const FormLogin = () => {
 
           <button 
             className={styles.btnFacebook}
-            onClick={ onFacebookSignIn } 
+            // onClick={ onFacebookSignIn } 
           >
             <img
               src={FacebookSVG}
@@ -111,10 +109,10 @@ export const FormLogin = () => {
           </button>
         </div>
 
-        <Link to="/forgot-password">
+        <Link to="/auth/forgot-password">
           <small className={styles.smallText}>¿Olvidaste tu contraseña?</small>
         </Link>
-        <Link to="/register">
+        <Link to="/auth/register">
           <small className={styles.smallText}>
             ¿No tenés cuenta? Registrate
           </small>

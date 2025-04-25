@@ -11,7 +11,7 @@ p-5 rounded-xl shadow-2xl hover:scale-105 hover:-rotate-1 transition-transform" 
     border-radius: 1rem;
     background-color: var(--whiteCustom);
     margin: 1rem 0rem 1rem 0rem;
-    font-family: var(--fontPrimary);
+    font-family: var(--fontSecondary);
     box-shadow: var(--boxShadow);
     padding: 1rem;
     transition: transform 0.5s ease;

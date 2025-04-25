@@ -1,0 +1,8 @@
+@import '../../styles/variables.css';
+
+
+.fullNameContainer{
+    display: flex;
+    width: 90%;
+}
+
