@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { CardProduct } from '../components';
+import { CardProduct } from '.';
 import { Arrow } from '../../ui/components/ArrowButton';
 import styles from '../styles/CarouselProducts.module.css';
 import { getProducts } from '../../helpers/getProducts';

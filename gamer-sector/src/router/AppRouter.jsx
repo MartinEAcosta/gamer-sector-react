@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import { ShopRoutes } from "../shop/routes/ShopRoutes";
+import { ShopRoutes } from "../market/routes/ShopRoutes";
 import { AuthRoutes } from "../auth/routes/AuthRoutes";
 
 export const AppRouter = () => {

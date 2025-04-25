@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { HomePage , ProductPage, ListOfProductsPage } from "../pages/";
+import { HomePage , ProductPage, ListOfProductsPage } from "../pages";
 
 export const ShopRoutes = () => {
     return (

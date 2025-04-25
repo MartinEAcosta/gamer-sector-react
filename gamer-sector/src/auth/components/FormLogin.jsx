@@ -7,7 +7,7 @@ import { AuthContext } from '../context/AuthContext';
 import FacebookSVG from '../../assets/facebook-white.svg';
 import GoogleSVG from '../../assets/google-color.svg';
 import { useDispatch, useSelector } from 'react-redux';
-import { startGoogleSignIn } from '../../store/auth/thunks';
+import { startFacebookSignIn, startGoogleSignIn } from '../../store/auth/thunks';
 
 export const FormLogin = () => {
 
@@ -27,6 +27,12 @@ export const FormLogin = () => {
     
     dispatch( startGoogleSignIn() );
 
+  }
+
+  const onFacebookSignIn = ( e ) => {
+    e.preventDefault();
+
+    dispatch( startFacebookSignIn() );
   }
 
   const onLogin = ( e ) => {
@@ -80,7 +86,10 @@ export const FormLogin = () => {
         </div>
 
         <div className={styles.containerSocialMedia}>
-          <button className={styles.btnGoogle} onClick={onGoogleSignIn}>
+          <button 
+            className={styles.btnGoogle} 
+            onClick={ onGoogleSignIn }
+          >
             <img
               src={GoogleSVG}
               alt="Google Icon"
@@ -89,7 +98,10 @@ export const FormLogin = () => {
             Continuar con Google
           </button>
 
-          <button className={styles.btnFacebook}>
+          <button 
+            className={styles.btnFacebook}
+            onClick={ onFacebookSignIn } 
+          >
             <img
               src={FacebookSVG}
               alt="Facebook Icon"
