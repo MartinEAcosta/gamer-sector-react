@@ -1,8 +1,16 @@
 @import '../../styles/variables.css';
 
-
-.fullNameContainer{
+/* Se encarga de alinear los campos firstname y lastname en la misma linea */
+.fullNameContainer {
     display: flex;
-    width: 90%;
+    width: 25vw;
+}
+/* Se encarga de encuadrar el label on click */
+.fullNameContainer input{
+    width: 100%;
 }
 
+.fullNameContainer input:focus~label ,
+.fullNameContainer input:valid~label{
+    width: 50%;
+}
