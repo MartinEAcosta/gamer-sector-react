@@ -19,6 +19,7 @@ export const FormRegister = () => {
 
   const onRegister = (e) => {
     e.preventDefault();
+    
     startRegister({ email, firstname, lastname, password });
   }
 
