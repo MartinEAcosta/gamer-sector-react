@@ -6,7 +6,7 @@ export const useAuthStore = () => {
     const dispatch = useDispatch()
 
     const startRegister = async(  ) => {
-
+        // TODO
     }
 
 }

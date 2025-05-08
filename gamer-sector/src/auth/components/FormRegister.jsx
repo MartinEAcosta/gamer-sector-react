@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import global from '../styles/FormGlobal.module.css';
 import styles from '../styles/FormRegister.module.css';
+import FacebookSVG from '../../assets/facebook-white.svg';
+import GoogleSVG from '../../assets/google-color.svg';
 
 export const FormRegister = () => {
 
@@ -88,8 +90,32 @@ export const FormRegister = () => {
               Contraseña
             </label>
           </div>
+          <div className={global.containerSocialMedia}>
+            <button
+              className={global.btnGoogle}
+              // onClick={ onGoogleSignIn }
+            >
+              <img
+                src={GoogleSVG}
+                alt="Google Icon"
+                className={global.socialMediaSVG}
+              />
+              Registrarse con Google
+            </button>
 
-          <Link to="/auth/register">
+            <button
+              className={global.btnFacebook}
+              // onClick={ onFacebookSignIn }
+            >
+              <img
+                src={FacebookSVG}
+                alt="Facebook Icon"
+                className={global.socialMediaSVG}
+              />
+              Registrarse con Facebook
+            </button>
+          </div>
+          <Link to="/auth/login">
             <small className={global.smallText}>
               ¿Ya tienes tu cuenta? Ingresa pulsando aquí.
             </small>
@@ -100,7 +126,6 @@ export const FormRegister = () => {
             value="Registrarse"
             className={` ${global.btnSumbit} `}
           />
-
         </form>
       </>
     );

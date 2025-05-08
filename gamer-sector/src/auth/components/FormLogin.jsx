@@ -1,7 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
 import global from '../styles/FormGlobal.module.css';
-import styles from '../styles/FormLogin.module.css';
-
 import { useForm } from '../../hooks/useForm';
 import FacebookSVG from '../../assets/facebook-white.svg';
 import GoogleSVG from '../../assets/google-color.svg';
@@ -48,9 +46,9 @@ export const FormLogin = () => {
   return (
     <>
       <form 
-        className={ styles.form } 
+        className={ global.form } 
         onSubmit={ onLogin }>
-        <div className={styles.inputGroup}>
+        <div className={global.inputContainer}>
           <input
             type="email"
             autoComplete="off"
@@ -58,62 +56,62 @@ export const FormLogin = () => {
             id="email"
             value={email}
             placeholder="example@gmail.com"
-            className={styles.inputForm}
+            className={global.inputForm}
             onChange={onInputChange}
             required
           />
-          <label htmlFor="email" className={styles.labelText}>
+          <label htmlFor="email" className={global.labelText}>
             Email
           </label>
         </div>
 
-        <div className={styles.inputGroup}>
+        <div className={global.inputContainer}>
           <input
             type="password"
             name="password"
             id="password"
             value={password}
             placeholder="••••••••"
-            className={styles.inputForm}
+            className={global.inputForm}
             onChange={onInputChange}
             required
           />
-          <label htmlFor="password" className={styles.labelText}>
+          <label htmlFor="password" className={global.labelText}>
             Contraseña
           </label>
         </div>
 
-        <div className={styles.containerSocialMedia}>
+        <div className={global.containerSocialMedia}>
           <button 
-            className={styles.btnGoogle} 
+            className={global.btnGoogle} 
             // onClick={ onGoogleSignIn }
           >
             <img
               src={GoogleSVG}
               alt="Google Icon"
-              className={styles.socialMediaSVG}
+              className={global.socialMediaSVG}
             />
             Continuar con Google
           </button>
 
           <button 
-            className={styles.btnFacebook}
+            className={global.btnFacebook}
             // onClick={ onFacebookSignIn } 
           >
             <img
               src={FacebookSVG}
               alt="Facebook Icon"
-              className={styles.socialMediaSVG}
+              className={global.socialMediaSVG}
             />
             Continuar con Facebook
           </button>
         </div>
 
         <Link to="/auth/forgot-password">
-          <small className={styles.smallText}>¿Olvidaste tu contraseña?</small>
+          <small className={global.smallText}>¿Olvidaste tu contraseña?</small>
         </Link>
         <Link to="/auth/register">
-          <small className={styles.smallText}>
+          <small className={global.smallText}>
             ¿No tenés cuenta? Registrate
           </small>
         </Link>
@@ -121,7 +119,7 @@ export const FormLogin = () => {
         <input
           type="submit"
           value="Ingresar"
-          className={` ${styles.btnSumbit} `}
+          className={` ${global.btnSumbit} `}
         />
       </form>
     </>

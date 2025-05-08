@@ -64,10 +64,11 @@
     padding: 15px;
     color: var(--whiteCustom);
     background-color: rgba(30, 45, 60, 0.5);
+    box-shadow: 0 5px 5px -5px rgb(0 0 0 / 0.1), 0 5px 10px 3px rgb(0 0 0 / 0.1);
     border-radius: 30px;
     border-color: transparent;
     font-family: var(--fontPrimary);
-    transition: transform 0.2s ease-in;
+    transition: transform 0.2s ease-in, box-shadow 0.2s ease-in, background-color 0.2s ease-in;
 }
 
 .inputForm:focus{
