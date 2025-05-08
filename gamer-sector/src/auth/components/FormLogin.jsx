@@ -3,6 +3,7 @@ import global from '../styles/FormGlobal.module.css';
 import { useForm } from '../../hooks/useForm';
 import FacebookSVG from '../../assets/facebook-white.svg';
 import GoogleSVG from '../../assets/google-color.svg';
+import { useAuthStore } from '../../hooks/useAuthStore';
 // import { useDispatch, useSelector } from 'react-redux';
 
 export const FormLogin = () => {
@@ -10,7 +11,7 @@ export const FormLogin = () => {
   // const { } = useSelector( (state) => state.auth );
   // const dispatch = useDispatch();
 
-  const navigate = useNavigate();
+  const { startLogin } = useAuthStore();
 
   const { email , password ,onInputChange } = useForm({
     email : '',
@@ -33,14 +34,8 @@ export const FormLogin = () => {
   const onLogin = ( e ) => {
     e.preventDefault();
     
-    const lastPath = localStorage.getItem('lastPath') || '/';
+    startLogin({ email , password });
 
-    console.log(email, password);
-
-
-    navigate( lastPath , {
-      replace: true
-    });
   }
 
   return (

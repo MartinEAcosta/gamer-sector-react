@@ -17,6 +17,7 @@ export const useAuthStore = () => {
 
             localStorage.setItem('token', data.token);
             localStorage.setItem('token-init-date', new Date().getTime());
+
             dispatch( onLogin( { email , firstname , lastname , id: data.newUser.id } ) );
         }
         catch(error){
@@ -24,13 +25,40 @@ export const useAuthStore = () => {
         }
     }
 
+    const startLogin = async( { email , password } ) => {
+        
+        dispatch( onCheckingCredentials() );
+
+        try{
+
+            const { data } = await marketApi.post('/user/' , { email , password} );
+
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('token-init-date', new Date().getTime());
+
+            dispatch( onLogin( { email , firstname: data.user.firstName , lastname: data.user.lastName ,  id: data.user.id } ) );
+
+        }
+        catch(error){
+            dispatch( onLogout( error.reponse.data.msg ) );
+        }
+    }
+
+    const startLogout = () => {
+
+        localStorage.clear();
+        dispatch( onLogout() );
+    }
 
     return{
         // Props
         status,
 
         // Metodos
-        startRegister
+        startRegister,
+        startLogin,
+        startLogout,
+
     }
 
 }
