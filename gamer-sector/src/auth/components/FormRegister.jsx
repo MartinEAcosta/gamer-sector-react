@@ -4,19 +4,23 @@ import global from '../styles/FormGlobal.module.css';
 import styles from '../styles/FormRegister.module.css';
 import FacebookSVG from '../../assets/facebook-white.svg';
 import GoogleSVG from '../../assets/google-color.svg';
+import { useAuthStore } from "../../hooks/useAuthStore";
 
 export const FormRegister = () => {
 
-    const { email , firstname , lastname , password , onInputChange } = useForm({
-        email            : '',
-        firstname        : '',
-        lastname         : '',
-        password         : '',
-    });
+  const { status , startRegister } = useAuthStore();
 
-    const onRegister = () => {
+  const { email , firstname , lastname , password , onInputChange } = useForm({
+      email            : '',
+      firstname        : '',
+      lastname         : '',
+      password         : '',
+  });
 
-    }
+  const onRegister = (e) => {
+    e.preventDefault();
+    startRegister({ email, firstname, lastname, password });
+  }
 
     return (
       <>

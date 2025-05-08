@@ -11,7 +11,7 @@ export const authSlice = createSlice({
     },
     reducers: {
 
-        login: ( state, { payload } ) => {
+        onLogin: ( state, { payload } ) => {
             state.status = 'authenticated',
             state.firstName = payload.firstName,
             state.imgURL = payload.imgURL,
@@ -19,7 +19,7 @@ export const authSlice = createSlice({
             state.errorMessage = null;
         },
 
-        logout: ( state , { payload } ) => {
+        onLogout: ( state , { payload } ) => {
             state.status = 'not-authenticated',
             state.displayName = null,
             state.photoURL = null,
@@ -27,7 +27,7 @@ export const authSlice = createSlice({
             state.errorMessage = payload;
         },
         
-        checkingCredentials: ( state ) => {
+        onCheckingCredentials: ( state ) => {
             state.status = 'checking';
         }
 
@@ -37,4 +37,4 @@ export const authSlice = createSlice({
 
 
 // Action creators are generated for each case reducer function
-export const { login , logout , checkingCredentials } = authSlice.actions;
+export const { onLogin , onLogout , onCheckingCredentials } = authSlice.actions;
