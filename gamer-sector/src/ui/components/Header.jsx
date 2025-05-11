@@ -9,7 +9,7 @@ export const Header = () => {
 
     const navigate = useNavigate();
 
-    const { status , isChecking , startLogout } = useAuthStore();
+    const { status  , startLogout } = useAuthStore();
 
     const onLogout = () => {
 
@@ -36,7 +36,7 @@ export const Header = () => {
                     <SearcherBar />
                     
                     {   
-                        (status === 'not-authenticated' || isChecking) &&
+                        (status === 'not-authenticated' || status === 'checking') &&
                         <Link className={styles.btnSesion} to="/auth/login">
                                 INICIAR SESIÓN
                         </Link>

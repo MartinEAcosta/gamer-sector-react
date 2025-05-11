@@ -7,4 +7,14 @@ const marketApi = axios.create({
     baseURL: VITE_API_URL
 });
 
+marketApi.interceptors.request.use( config => {
+    
+    config.headers = {
+        ...config.headers,
+        'x-token' : localStorage.getItem('token'),
+    }
+
+    return config;
+} )
+
 export default marketApi;

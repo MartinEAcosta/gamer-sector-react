@@ -14,8 +14,8 @@ export const FormLogin = () => {
   const { startLogin } = useAuthStore();
 
   const { email , password ,onInputChange } = useForm({
-    email : '',
-    password : '',
+    email : 'prueba@gmail.com',
+    password : 'contraseña',
   });
 
   // const onGoogleSignIn = ( e ) => {

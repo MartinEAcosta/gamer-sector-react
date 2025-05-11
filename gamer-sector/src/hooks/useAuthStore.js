@@ -4,7 +4,7 @@ import marketApi from "../api/marketApi";
 
 export const useAuthStore = () => {
 
-    const { status } = useSelector( (state) => state.auth );
+    const { status , user } = useSelector( (state) => state.auth );
     const dispatch = useDispatch()
 
     const startRegister = async( { email , firstname , lastname , password } ) => {
@@ -35,7 +35,8 @@ export const useAuthStore = () => {
 
             localStorage.setItem('token', data.token);
             localStorage.setItem('token-init-date', new Date().getTime());
-            console.log(data);
+
+
             dispatch( onLogin( { email , firstname: data.user.firstname , lastname: data.user.lastname ,  id: data.user.id } ) );
 
         }
@@ -51,15 +52,36 @@ export const useAuthStore = () => {
         dispatch( onLogout() );
     }
 
+    const checkAuthToken = async() => {
+
+        const token = localStorage.getItem('token');
+        if( !token ) return dispatch( onLogout(  ) );
+
+        try{
+            
+            const { data } = await marketApi.get('/user/renew');
+            console.log(data);
+            localStorage.setItem( 'token', data.token );
+            localStorage.setItem( 'token-init-date', new Date().getTime() );
+            
+
+            dispatch( onLogin( { ...user} ) );
+        }
+        catch(error){
+            localStorage.clear();
+            dispatch( onLogout( ) );
+        }
+    }
+
     return{
         // Props
         status,
-        isChecking: status === 'checking',
 
         // Metodos
-        startRegister,
+        checkAuthToken,
         startLogin,
         startLogout,
+        startRegister,
 
     }
 
