@@ -36,7 +36,7 @@ export const useAuthStore = () => {
             localStorage.setItem('token', data.token);
             localStorage.setItem('token-init-date', new Date().getTime());
 
-            dispatch( onLogin( { email , firstname: data.user.firstName , lastname: data.user.lastName ,  id: data.user.id } ) );
+            dispatch( onLogin( { email , firstname: data.user.firstname , lastname: data.user.lastname ,  id: data.user.id } ) );
 
         }
         catch(error){

@@ -50,11 +50,6 @@
     align-items: center;
 }
 
-.userIcon{
-    height: 50%;
-    width: auto;
-    margin: 2px;
-}
 
 /* "hover:text-slate-300 text-slate-100 font-roboto font-bold pl-5 py-2 rounded-xl
                             "  */
@@ -65,8 +60,15 @@
     font-weight: 600;
     margin: 10px 2rem;
     text-decoration: none;
+    text-wrap: nowrap;
 }
 
 .btnSesion:hover{
     opacity: 0.9;
+}
+
+.profileContainer{
+    display: flex;
+    width: 6%;
+    height: 50%;
 }

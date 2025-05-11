@@ -8,7 +8,7 @@ import { useAuthStore } from "../../hooks/useAuthStore";
 
 export const FormRegister = () => {
 
-  const { status , startRegister } = useAuthStore();
+  const { startRegister } = useAuthStore();
 
   const { email , firstname , lastname , password , onInputChange } = useForm({
       email            : '',

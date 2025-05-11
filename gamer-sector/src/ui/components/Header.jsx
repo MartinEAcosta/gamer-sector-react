@@ -1,7 +1,8 @@
-import Logo from '../../assets/joystick.svg';
-import { SearcherBar } from './SearcherBar';
-import styles from '../styles/Header.module.css';
 import { Link, useNavigate } from 'react-router-dom';
+import styles from '../styles/Header.module.css';
+import { SearcherBar } from './SearcherBar';
+import Logo from '../../assets/joystick.svg';
+import UserIcon from '../../assets/usericon.svg'
 
 export const Header = () => {
 
@@ -13,7 +14,6 @@ export const Header = () => {
             replace: true
         });
     }
-
 
     return (
         <>
@@ -42,9 +42,11 @@ export const Header = () => {
                         <Link className={styles.btnSesion} onClick={ onLogout } >
                             CERRAR SESIÓN
                         </Link>
-                        // Avatar 
+                        
                     }
-
+                    <div className={styles.profileContainer}>
+                        <img src={UserIcon}  alt="User icon" />
+                    </div>
                 </div>
 
             </header>
