@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import styles from '../styles/Header.module.css';
 import { SearcherBar } from './SearcherBar';
+import { useAuthStore } from '../../hooks/'
 import Logo from '../../assets/joystick.svg';
 import UserIcon from '../../assets/usericon.svg'
 
@@ -8,8 +9,11 @@ export const Header = () => {
 
     const navigate = useNavigate();
 
+    const { status , isChecking , startLogout } = useAuthStore();
+
     const onLogout = () => {
 
+        startLogout();
         navigate('/login', {
             replace: true
         });
@@ -32,13 +36,13 @@ export const Header = () => {
                     <SearcherBar />
                     
                     {   
-                        !localStorage.getItem('user') &&
+                        (status === 'not-authenticated' || isChecking) &&
                         <Link className={styles.btnSesion} to="/auth/login">
                                 INICIAR SESIÓN
                         </Link>
                         
                         ||
-
+                        (status === 'authenticated') &&
                         <Link className={styles.btnSesion} onClick={ onLogout } >
                             CERRAR SESIÓN
                         </Link>

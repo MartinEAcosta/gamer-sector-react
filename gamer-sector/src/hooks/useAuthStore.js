@@ -35,12 +35,13 @@ export const useAuthStore = () => {
 
             localStorage.setItem('token', data.token);
             localStorage.setItem('token-init-date', new Date().getTime());
-
+            console.log(data);
             dispatch( onLogin( { email , firstname: data.user.firstname , lastname: data.user.lastname ,  id: data.user.id } ) );
 
         }
         catch(error){
-            dispatch( onLogout( error.reponse.data.msg ) );
+            console.log(error);
+            // dispatch( onLogout( error.reponse.data.msg ) );
         }
     }
 
@@ -53,6 +54,7 @@ export const useAuthStore = () => {
     return{
         // Props
         status,
+        isChecking: status === 'checking',
 
         // Metodos
         startRegister,

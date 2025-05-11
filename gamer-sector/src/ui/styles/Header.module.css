@@ -50,6 +50,10 @@
     align-items: center;
 }
 
+.disabled{
+    color: red;
+}
+
 
 /* "hover:text-slate-300 text-slate-100 font-roboto font-bold pl-5 py-2 rounded-xl
                             "  */
