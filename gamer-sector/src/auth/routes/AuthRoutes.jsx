@@ -3,6 +3,7 @@ import { LoginPage } from "../pages";
 import { RegisterPage } from "../pages/RegisterPage";
 
 export const AuthRoutes = () => {
+
     return (
         <>
             <Routes>
