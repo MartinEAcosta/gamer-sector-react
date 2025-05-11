@@ -3,6 +3,7 @@ import { ShopRoutes } from "../market/routes/ShopRoutes";
 import { AuthRoutes } from "../auth/routes/AuthRoutes";
 import { useAuthStore } from "../hooks/useAuthStore";
 import { useEffect } from "react";
+import { LoadingPage } from "../auth/pages/LoadingPage";
 
 export const AppRouter = () => {
 
@@ -11,6 +12,12 @@ export const AppRouter = () => {
     useEffect(() => {
         checkAuthToken();
     }, []);
+
+    if ( status === 'checking' ){
+        return (
+            <LoadingPage />
+        );
+    }
 
     return (
         <>
